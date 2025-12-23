@@ -58,7 +58,7 @@ export default function Home() {
         title="Connecting companies with top data talent, fast."
         subtitle="We specialize in hiring data engineers, data scientists, and analytics professionals who drive business impact."
         primaryCTA={{ text: 'Hire Talent', href: '/contact' }}
-        secondaryCTA={{ text: 'Join as Candidate', href: '/candidates' }}
+        secondaryCTA={{ text: 'Apply Now', href: '/apply' }}
         variant="dark"
       />
 
@@ -547,7 +547,7 @@ export default function Home() {
         subtitle="Let's connect you with top data professionals who can drive your business forward."
         actions={[
           { label: 'Hire Talent', href: '/contact', variant: 'primary' },
-          { label: 'Join as Candidate', href: '/candidates', variant: 'outline-light' },
+          { label: 'Apply Now', href: '/apply', variant: 'outline-light' },
         ]}
       />
     </>

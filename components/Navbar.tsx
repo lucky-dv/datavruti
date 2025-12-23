@@ -185,9 +185,9 @@ export default function Navbar() {
         <div className="container-custom">
           <div className="flex h-20 items-center justify-center md:justify-between">
             <Link href="/" className="flex items-center group">
-              <div className="relative h-14 md:h-16 bg-white rounded-lg px-3 py-2 shadow-sm">
+              <div className="relative h-14 md:h-16 px-3 py-2">
                 <Image
-                  src="/datavruti-full.jpg"
+                  src="/datavruti-full.png"
                   alt="DataVruti Logo"
                   width={180}
                   height={64}
@@ -221,10 +221,10 @@ export default function Navbar() {
                 );
               })}
               <Link
-                href="/contact"
+                href="/apply"
                 className="ml-4 relative inline-flex items-center gap-2 bg-primary-600 text-white px-7 py-3 rounded-xl hover:bg-primary-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transform"
               >
-                <span className="relative">Hire Talent</span>
+                <span className="relative">Apply Now</span>
                 <svg className="relative w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>

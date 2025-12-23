@@ -21,12 +21,12 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-5">
             <div className="mb-6">
-              <div className="relative h-16 bg-white rounded-lg px-4 py-3 shadow-lg inline-block">
+              <div className="relative h-16 rounded-lg inline-block">
                 <Image
-                  src="/datavruti-full.jpg"
+                  src="/dvlogowhite.png"
                   alt="DataVruti Logo"
-                  width={200}
-                  height={64}
+                  width={280}
+                  height={96}
                   className="object-contain h-full w-auto"
                 />
               </div>
@@ -135,19 +135,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-700/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-neutral-500 text-sm text-center md:text-left">
-            © {currentYear} Reflion Tech Private Limited. All rights reserved.
-          </p>
-          <div className="flex flex-col md:flex-row items-center gap-4">
-            <div className="flex items-center gap-4">
-              <Link href="/terms-of-service" className="text-neutral-500 hover:text-white text-sm transition-colors duration-200">
-                Terms Of Service
-              </Link>
-              <span className="text-neutral-700">|</span>
-              <Link href="/privacy-policy" className="text-neutral-500 hover:text-white text-sm transition-colors duration-200">
-                Privacy Policy
-              </Link>
+        <div className="border-t border-slate-700/50 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-neutral-400 text-sm text-center md:text-left font-semibold">
+              © {currentYear} Reflion Tech Private Limited. All rights reserved.
+            </p>
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <div className="flex items-center gap-4">
+                <Link href="/terms-of-service" className="text-neutral-400 hover:text-white text-sm transition-colors duration-200">
+                  Terms Of Service
+                </Link>
+                <span className="text-neutral-600">|</span>
+                <Link href="/privacy-policy" className="text-neutral-400 hover:text-white text-sm transition-colors duration-200">
+                  Privacy Policy
+                </Link>
+              </div>
             </div>
           </div>
         </div>

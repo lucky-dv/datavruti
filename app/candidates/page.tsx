@@ -1,6 +1,5 @@
 import Hero from '@/components/Hero';
-import TalentPoolForm from '@/components/TalentPoolForm';
-import SectionHeader from '@/components/ui/SectionHeader';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
@@ -38,7 +37,7 @@ export default function CandidatesPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-12 text-center">
-              Why Join datavruti?
+              Why Candidates Choose datavruti
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
@@ -142,6 +141,31 @@ export default function CandidatesPage() {
             <p className="text-center text-neutral-600 mb-12 max-w-2xl mx-auto">
  Permanent & contract positions in all things data
             </p>
+
+            {/* Work & Shift Options */}
+            <div className="bg-white p-6 rounded-xl shadow-md border-2 border-neutral-100 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <div>
+                    <p className="font-semibold text-neutral-900 mb-1">Work Options</p>
+                    <p className="text-sm text-neutral-600">Remote, Hybrid & On-site positions available</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <svg className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <p className="font-semibold text-neutral-900 mb-1">Shift Options</p>
+                    <p className="text-sm text-neutral-600">IST, US, UK, APAC timings</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
@@ -209,15 +233,15 @@ export default function CandidatesPage() {
               Industries & Technologies We Cover
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="group relative">
-                <div className="relative bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-neutral-100 hover:border-primary">
+              <div className="group relative h-full">
+                <div className="relative bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-neutral-100 hover:border-primary h-full flex flex-col">
                   <h3 className="text-xl font-bold text-neutral-900 mb-4 flex items-center">
                     <svg className="w-6 h-6 text-accent mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                     Industries
                   </h3>
-                  <ul className="grid grid-cols-2 gap-3">
+                  <ul className="grid grid-cols-2 gap-3 flex-grow">
                     {['BFSI', 'Retail', 'Manufacturing', 'eCommerce', 'Telecom', 'Healthcare', 'Automotive', 'Chemicals'].map((industry) => (
                       <li key={industry} className="flex items-center text-neutral-700">
                         <span className="w-2 h-2 bg-accent rounded-full mr-2"></span>
@@ -227,30 +251,22 @@ export default function CandidatesPage() {
                   </ul>
                 </div>
               </div>
-              <div className="group relative">
-                <div className="relative bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-neutral-100 hover:border-secondary">
+              <div className="group relative h-full">
+                <div className="relative bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-neutral-100 hover:border-secondary h-full flex flex-col">
                   <h3 className="text-xl font-bold text-neutral-900 mb-4 flex items-center">
                     <svg className="w-6 h-6 text-secondary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                     </svg>
                     Cloud Platforms
                   </h3>
-                  <ul className="grid grid-cols-2 gap-3">
-                    {['AWS', 'Azure', 'GCP', 'Oracle Cloud'].map((cloud) => (
+                  <ul className="grid grid-cols-2 gap-3 flex-grow">
+                    {['AWS', 'Azure', 'GCP', 'Oracle Cloud', 'IBM Cloud', 'Alibaba Cloud', 'DigitalOcean', 'Linode'].map((cloud) => (
                       <li key={cloud} className="flex items-center text-neutral-700">
                         <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
                         {cloud}
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 pt-6 border-t border-neutral-200">
-                    <p className="text-sm text-neutral-600">
-                      <strong>Work Options:</strong> Remote, Hybrid & On-site positions available
-                    </p>
-                    <p className="text-sm text-neutral-600 mt-2">
-                      <strong>Shift Options:</strong> IST, US, UK, APAC timings
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -258,54 +274,6 @@ export default function CandidatesPage() {
         </div>
       </section>
 
-      {/* Application Form */}
-      <section className="section-padding bg-neutral-50">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <SectionHeader
-              badge="Join Our Talent Pool"
-              title="Apply Now"
-              subtitle="Complete the 3-step application form to join our network. We'll match you with relevant opportunities from our 75+ renowned clients."
-              align="center"
-              className="mb-12"
-            />
-            <div className="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-neutral-200">
-              <div className="mb-8 p-6 bg-primary-50 rounded-lg border-l-4 border-primary">
-                <h3 className="text-lg font-semibold text-neutral-900 mb-2">
-                  📋 Quick Application Process
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                  <div className="flex items-start">
-                    <span className="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-2">1</span>
-                    <div>
-                      <p className="text-sm font-semibold text-neutral-800">Job Information</p>
-                      <p className="text-xs text-neutral-600">Role & preferences</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <span className="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-2">2</span>
-                    <div>
-                      <p className="text-sm font-semibold text-neutral-800">Basic Information</p>
-                      <p className="text-xs text-neutral-600">Personal & experience details</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <span className="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-2">3</span>
-                    <div>
-                      <p className="text-sm font-semibold text-neutral-800">Professional Details</p>
-                      <p className="text-xs text-neutral-600">Skills, certifications & resume</p>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-xs text-neutral-600 mt-4">
-                  ⏱️ Takes only 5-7 minutes to complete • Resume upload required (PDF/Word, max 10MB)
-                </p>
-              </div>
-              <TalentPoolForm />
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
