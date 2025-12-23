@@ -59,6 +59,7 @@ export default function TalentPoolForm() {
   const [toastType, setToastType] = useState<'success' | 'error' | 'info'>('info');
   const formRef = useRef<HTMLDivElement>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [submitting, setSubmitting] = useState(false);
 
   const [formData, setFormData] = useState<FormData>({
     email: '',
@@ -106,7 +107,18 @@ export default function TalentPoolForm() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+
+    // Sanitize input to prevent XSS
+    let sanitizedValue = value;
+
+    // Remove HTML tags and scripts
+    sanitizedValue = sanitizedValue.replace(/<[^>]*>/g, '');
+    // Remove javascript: protocol
+    sanitizedValue = sanitizedValue.replace(/javascript:/gi, '');
+    // Remove event handlers like onclick=
+    sanitizedValue = sanitizedValue.replace(/on\w+\s*=/gi, '');
+
+    setFormData({ ...formData, [name]: sanitizedValue });
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -376,59 +388,86 @@ export default function TalentPoolForm() {
     e.preventDefault();
     if (!validateStep(currentStep)) return;
 
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setToastMessage('Application submitted successfully! We\'ll be in touch soon.');
-    setToastType('success');
-    setShowToast(true);
+    setSubmitting(true);
 
-    // Reset form after successful submission
-    setTimeout(() => {
-      setCurrentStep(1);
-      setFormData({
-        email: '',
-        applyingFor: '',
-        applyingForOther: '',
-        jobSearchStatus: '',
-        jobType: '',
-        fullName: '',
-        gender: '',
-        genderOther: '',
-        mobile: '',
-        totalExperience: '',
-        currentCTC: '',
-        expectedCTC: '',
-        currentLocation: '',
-        preferredLocations: [],
-        preferredLocationsOther: '',
-        noticePeriod: '',
-        noticePeriodNegotiable: '',
-        earliestJoinDate: '',
-        recentEmployer: '',
-        recentJobTitle: '',
-        workplacePreference: '',
-        profileSummary: '',
-        cloudExperience: {
-          azure: '',
-          aws: '',
-          gcp: '',
-          oracle: '',
-        },
-        certifications: '',
-        industries: [],
-        industriesOther: '',
-        functionalDomains: [],
-        functionalDomainsOther: '',
-        workedAtGCC: '',
-        workedAtStartup: '',
-        underGraduateDegree: '',
-        underGraduateDegreeOther: '',
-        graduateDegree: '',
-        graduateDegreeOther: '',
-        shiftTimings: [],
-        resume: null,
+    try {
+      // Create form data to send
+      const submissionData = {
+        ...formData,
+        formType: 'talentPool',
+      };
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(submissionData),
       });
-    }, 2000);
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit form');
+      }
+
+      setToastMessage('Application submitted successfully! We\'ll be in touch soon.');
+      setToastType('success');
+      setShowToast(true);
+
+      // Reset form after successful submission
+      setTimeout(() => {
+        setCurrentStep(1);
+        setFormData({
+          email: '',
+          applyingFor: '',
+          applyingForOther: '',
+          jobSearchStatus: '',
+          jobType: '',
+          fullName: '',
+          gender: '',
+          genderOther: '',
+          mobile: '',
+          totalExperience: '',
+          currentCTC: '',
+          expectedCTC: '',
+          currentLocation: '',
+          preferredLocations: [],
+          preferredLocationsOther: '',
+          noticePeriod: '',
+          noticePeriodNegotiable: '',
+          earliestJoinDate: '',
+          recentEmployer: '',
+          recentJobTitle: '',
+          workplacePreference: '',
+          profileSummary: '',
+          cloudExperience: {
+            azure: '',
+            aws: '',
+            gcp: '',
+            oracle: '',
+          },
+          certifications: '',
+          industries: [],
+          industriesOther: '',
+          functionalDomains: [],
+          functionalDomainsOther: '',
+          workedAtGCC: '',
+          workedAtStartup: '',
+          underGraduateDegree: '',
+          underGraduateDegreeOther: '',
+          graduateDegree: '',
+          graduateDegreeOther: '',
+          shiftTimings: [],
+          resume: null,
+        });
+      }, 2000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setToastMessage('Failed to submit application. Please try again or contact us directly at sales@datavruti.com');
+      setToastType('error');
+      setShowToast(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const jobRoles = [
@@ -1355,9 +1394,20 @@ export default function TalentPoolForm() {
           ) : (
             <button
               type="submit"
-              className="ml-auto px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-600 transition-all font-medium shadow-lg hover:shadow-xl"
+              disabled={submitting}
+              className="ml-auto px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-600 transition-all font-medium shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
             >
-              Submit Application
+              {submitting ? (
+                <>
+                  <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Submitting...
+                </>
+              ) : (
+                'Submit Application'
+              )}
             </button>
           )}
         </div>

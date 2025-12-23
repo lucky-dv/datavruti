@@ -81,7 +81,18 @@ export default function ContactForm({ type = 'contact' }: ContactFormProps) {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // Sanitize input to prevent XSS
+    let sanitizedValue = value;
+
+    // Remove HTML tags and scripts
+    sanitizedValue = sanitizedValue.replace(/<[^>]*>/g, '');
+    // Remove javascript: protocol
+    sanitizedValue = sanitizedValue.replace(/javascript:/gi, '');
+    // Remove event handlers like onclick=
+    sanitizedValue = sanitizedValue.replace(/on\w+\s*=/gi, '');
+
+    setFormData((prev) => ({ ...prev, [name]: sanitizedValue }));
 
     // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
