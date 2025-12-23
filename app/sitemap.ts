@@ -3,75 +3,62 @@ import services from '@/content/services.json';
 import caseStudies from '@/content/case-studies.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.datavruti.com';
-  const currentDate = new Date();
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || 'https://datavruti.vercel.app';
 
-  // Static pages with specific priorities and change frequencies
-  const staticPages = [
+  const now = new Date();
+
+  const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
+      url: `${baseUrl}`,
+      lastModified: now,
+      changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
+      lastModified: now,
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/candidates`,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
+      url: `${baseUrl}/services`,
+      lastModified: now,
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/case-studies`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/candidates`,
+      lastModified: now,
+      changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/terms-of-service`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.3,
+      url: `${baseUrl}/contact`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.6,
     },
   ];
 
-  // Dynamic service pages
-  const servicePages = services.map((service) => ({
+  const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
     url: `${baseUrl}/services/${service.slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.6,
   }));
 
-  // Dynamic case study pages
-  const caseStudyPages = caseStudies.map((study) => ({
+  const caseStudyPages: MetadataRoute.Sitemap = caseStudies.map((study) => ({
     url: `${baseUrl}/case-studies/${study.slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.6,
   }));
 
   return [...staticPages, ...servicePages, ...caseStudyPages];

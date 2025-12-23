@@ -1,9 +1,30 @@
 import Hero from '@/components/Hero';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Terms of Service | DataVruti',
-  description: 'Terms and conditions for using DataVruti recruitment services.',
-};
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Terms of Service | DataVruti - Data Recruitment Services',
+    description: 'Read DataVruti\'s terms of service to understand the terms and conditions for using our data recruitment and staffing services.',
+    alternates: {
+      canonical: `${siteUrl}/terms-of-service`,
+    },
+    openGraph: {
+      url: `${siteUrl}/terms-of-service`,
+      title: 'Terms of Service | DataVruti - Data Recruitment Services',
+      description: 'Read DataVruti\'s terms of service to understand the terms and conditions for using our data recruitment and staffing services.',
+    },
+    twitter: {
+      title: 'Terms of Service | DataVruti - Data Recruitment Services',
+      description: 'Read DataVruti\'s terms of service to understand the terms and conditions for using our data recruitment and staffing services.',
+    },
+    robots: {
+      index: false,
+      follow: true,
+    },
+  };
+}
 
 export default function TermsOfServicePage() {
   return (

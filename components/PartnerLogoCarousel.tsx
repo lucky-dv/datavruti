@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
+import Image from 'next/image';
 
 type PartnerLogo = {
   name: string;
@@ -50,12 +51,13 @@ export default function PartnerLogoCarousel({ logos, bgColor = 'white' }: Partne
               key={`${logo.name}-${index}`}
               className="flex h-28 w-44 sm:h-32 sm:w-52 flex-shrink-0 flex-col items-center justify-center rounded-2xl border border-neutral-200/50 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 px-6 py-4"
             >
-              <div className="flex flex-1 w-full items-center justify-center">
-                <img
+              <div className="flex flex-1 w-full items-center justify-center relative h-16 w-full">
+                <Image
                   src={logo.image}
                   alt={`${logo.name} logo`}
-                  className="max-h-16 max-w-full w-auto h-auto object-contain"
-                  loading="lazy"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 176px, 208px"
                 />
               </div>
               <p className="mt-2 w-full text-xs font-medium text-neutral-500 text-center truncate">

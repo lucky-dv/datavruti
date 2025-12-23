@@ -3,11 +3,28 @@ import CaseStudyCard from '@/components/CaseStudyCard';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
 import caseStudies from '@/content/case-studies.json';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Case Studies | datavruti - Success Stories',
-  description: 'See how datavruti has helped companies build exceptional data teams. Real results from our data hiring and recruitment services.',
-};
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Data Hiring Case Studies | Recruitment Success Stories | DataVruti',
+    description: 'Explore DataVruti\'s data hiring success stories and case studies. Learn how we helped BFSI, SaaS companies, and startups build world-class data teams through strategic recruitment partnerships.',
+    alternates: {
+      canonical: `${siteUrl}/case-studies`,
+    },
+    openGraph: {
+      url: `${siteUrl}/case-studies`,
+      title: 'Data Hiring Case Studies | Recruitment Success Stories | DataVruti',
+      description: 'Explore DataVruti\'s data hiring success stories and case studies. Learn how we helped BFSI, SaaS companies, and startups build world-class data teams through strategic recruitment partnerships.',
+    },
+    twitter: {
+      title: 'Data Hiring Case Studies | Recruitment Success Stories | DataVruti',
+      description: 'Explore DataVruti\'s data hiring success stories and case studies. Learn how we helped BFSI, SaaS companies, and startups build world-class data teams through strategic recruitment partnerships.',
+    },
+  };
+}
 
 export default function CaseStudiesPage() {
   return (

@@ -1,11 +1,28 @@
 import Hero from '@/components/Hero';
 import TalentPoolForm from '@/components/TalentPoolForm';
 import SectionHeader from '@/components/ui/SectionHeader';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Join Our Talent Pool | datavruti - 100+ Data Jobs',
-  description: '100+ permanent & contract data jobs across all levels. Data Engineers, Scientists, Analysts, DevOps, MLOps & more. Apply now to join our curated talent pool and get matched with top companies.',
-};
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Join Talent Pool | 100+ Data Jobs | Data Engineers & Scientists',
+    description: 'Apply for 100+ permanent and contract data jobs across all levels. Data Engineers, Scientists, Analysts, DevOps, MLOps & more. Join DataVruti\'s curated talent pool and get matched with top companies.',
+    alternates: {
+      canonical: `${siteUrl}/candidates`,
+    },
+    openGraph: {
+      url: `${siteUrl}/candidates`,
+      title: 'Join Talent Pool | 100+ Data Jobs | Data Engineers & Scientists',
+      description: 'Apply for 100+ permanent and contract data jobs across all levels. Data Engineers, Scientists, Analysts, DevOps, MLOps & more. Join DataVruti\'s curated talent pool and get matched with top companies.',
+    },
+    twitter: {
+      title: 'Join Talent Pool | 100+ Data Jobs | Data Engineers & Scientists',
+      description: 'Apply for 100+ permanent and contract data jobs across all levels. Data Engineers, Scientists, Analysts, DevOps, MLOps & more. Join DataVruti\'s curated talent pool and get matched with top companies.',
+    },
+  };
+}
 
 export default function CandidatesPage() {
   return (

@@ -1,9 +1,30 @@
 import Hero from '@/components/Hero';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Privacy Policy | DataVruti',
-  description: 'Learn how DataVruti collects, uses, and protects your personal information.',
-};
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Privacy Policy | DataVruti - Data Recruitment Agency',
+    description: 'Read DataVruti\'s privacy policy to understand how we collect, use, and protect your personal information during recruitment services.',
+    alternates: {
+      canonical: `${siteUrl}/privacy-policy`,
+    },
+    openGraph: {
+      url: `${siteUrl}/privacy-policy`,
+      title: 'Privacy Policy | DataVruti - Data Recruitment Agency',
+      description: 'Read DataVruti\'s privacy policy to understand how we collect, use, and protect your personal information during recruitment services.',
+    },
+    twitter: {
+      title: 'Privacy Policy | DataVruti - Data Recruitment Agency',
+      description: 'Read DataVruti\'s privacy policy to understand how we collect, use, and protect your personal information during recruitment services.',
+    },
+    robots: {
+      index: false,
+      follow: true,
+    },
+  };
+}
 
 export default function PrivacyPolicyPage() {
   return (

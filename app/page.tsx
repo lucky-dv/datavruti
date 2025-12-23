@@ -7,7 +7,29 @@ import PartnerLogoCarousel from '@/components/PartnerLogoCarousel';
 import services from '@/content/services.json';
 import testimonials from '@/content/testimonials.json';
 import aboutData from '@/content/about.json';
-import { organizationSchema } from '@/utils/seo-config';
+import { organizationSchema, localBusinessSchema, websiteSchema, breadcrumbSchema } from '@/utils/seo-config';
+import { Metadata } from 'next';
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Data Recruitment Agency | Hire Data Engineers, Scientists & Analysts',
+    description: 'DataVruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
+    alternates: {
+      canonical: siteUrl,
+    },
+    openGraph: {
+      url: siteUrl,
+      title: 'Data Recruitment Agency | Hire Data Engineers, Scientists & Analysts',
+      description: 'DataVruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
+    },
+    twitter: {
+      title: 'Data Recruitment Agency | Hire Data Engineers, Scientists & Analysts',
+      description: 'DataVruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
+    },
+  };
+}
 
 export default function Home() {
   const partnerLogos = aboutData.partnerLogos ?? [];
@@ -17,6 +39,18 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: 'Home', url: siteUrl }])) }}
       />
 
       {/* Hero Section */}

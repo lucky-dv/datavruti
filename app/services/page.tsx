@@ -3,11 +3,28 @@ import ServiceCard from '@/components/ServiceCard';
 import CTAButton from '@/components/CTAButton';
 import CTASection from '@/components/ui/CTASection';
 import services from '@/content/services.json';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Our Services | datavruti - Data & Analytics Hiring',
-  description: 'Specialized recruitment services for data engineers, data scientists, and analytics consultants. Expert hiring solutions for your data team.',
-};
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Data Recruitment Services | Contract & Permanent Staffing Solutions',
+    description: 'DataVruti offers comprehensive data recruitment services including contract staffing, permanent hiring, and RPO for data engineering, data science, and analytics roles. Specialized IT staffing for BFSI, SaaS, and startups.',
+    alternates: {
+      canonical: `${siteUrl}/services`,
+    },
+    openGraph: {
+      url: `${siteUrl}/services`,
+      title: 'Data Recruitment Services | Contract & Permanent Staffing Solutions',
+      description: 'DataVruti offers comprehensive data recruitment services including contract staffing, permanent hiring, and RPO for data engineering, data science, and analytics roles. Specialized IT staffing for BFSI, SaaS, and startups.',
+    },
+    twitter: {
+      title: 'Data Recruitment Services | Contract & Permanent Staffing Solutions',
+      description: 'DataVruti offers comprehensive data recruitment services including contract staffing, permanent hiring, and RPO for data engineering, data science, and analytics roles. Specialized IT staffing for BFSI, SaaS, and startups.',
+    },
+  };
+}
 
 export default function ServicesPage() {
   return (

@@ -6,11 +6,28 @@ import SectionHeader from '@/components/ui/SectionHeader';
 import CTASection from '@/components/ui/CTASection';
 import IconBadge from '@/components/ui/IconBadge';
 import aboutData from '@/content/about.json';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'About Us | datavruti',
-  description: 'Learn about datavruti - our mission, vision, and commitment to connecting companies with exceptional data talent.',
-};
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'About Us | DataVruti - Specialized Data Recruitment Agency',
+    description: 'Learn about DataVruti - India\'s premier data recruitment agency. Discover our mission to connect companies with exceptional data engineers, scientists, and analytics talent.',
+    alternates: {
+      canonical: `${siteUrl}/about`,
+    },
+    openGraph: {
+      url: `${siteUrl}/about`,
+      title: 'About Us | DataVruti - Specialized Data Recruitment Agency',
+      description: 'Learn about DataVruti - India\'s premier data recruitment agency. Discover our mission to connect companies with exceptional data engineers, scientists, and analytics talent.',
+    },
+    twitter: {
+      title: 'About Us | DataVruti - Specialized Data Recruitment Agency',
+      description: 'Learn about DataVruti - India\'s premier data recruitment agency. Discover our mission to connect companies with exceptional data engineers, scientists, and analytics talent.',
+    },
+  };
+}
 
 export default function AboutPage() {
   const partnerLogos = aboutData.partnerLogos ?? [];

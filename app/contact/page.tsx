@@ -1,10 +1,27 @@
 import Hero from '@/components/Hero';
 import ContactForm from '@/components/ContactForm';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Contact Us | datavruti - Let\'s Talk',
-  description: 'Get in touch with datavruti to discuss your data hiring needs. We\'re here to help you build exceptional data teams.',
-};
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Contact Us | DataVruti - Data Hiring Experts',
+    description: 'Get in touch with DataVruti to discuss your data hiring needs. Contact our recruitment experts in Ahmedabad and Mumbai to build exceptional data teams.',
+    alternates: {
+      canonical: `${siteUrl}/contact`,
+    },
+    openGraph: {
+      url: `${siteUrl}/contact`,
+      title: 'Contact Us | DataVruti - Data Hiring Experts',
+      description: 'Get in touch with DataVruti to discuss your data hiring needs. Contact our recruitment experts in Ahmedabad and Mumbai to build exceptional data teams.',
+    },
+    twitter: {
+      title: 'Contact Us | DataVruti - Data Hiring Experts',
+      description: 'Get in touch with DataVruti to discuss your data hiring needs. Contact our recruitment experts in Ahmedabad and Mumbai to build exceptional data teams.',
+    },
+  };
+}
 
 export default function ContactPage() {
   return (
