@@ -2,16 +2,14 @@ import { ReactNode } from 'react';
 
 interface IconBadgeProps {
   icon: ReactNode;
-  gradientFrom?: string;
-  gradientTo?: string;
+  bgColor?: string;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
 export default function IconBadge({
   icon,
-  gradientFrom = 'from-primary-500',
-  gradientTo = 'to-accent-600',
+  bgColor = 'bg-primary',
   size = 'md',
   className = '',
 }: IconBadgeProps) {
@@ -28,7 +26,7 @@ export default function IconBadge({
   };
 
   return (
-    <div className={`${sizeClasses[size]} bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 ${className}`}>
+    <div className={`${sizeClasses[size]} ${bgColor} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 ${className}`}>
       <div className={iconSizeClasses[size]}>
         {icon}
       </div>

@@ -414,9 +414,8 @@ export default function ContactForm({ type = 'contact' }: ContactFormProps) {
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="w-full relative bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-700 text-white px-8 py-4 text-lg rounded-xl hover:from-primary-700 hover:via-secondary-700 hover:to-primary-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-2xl hover:shadow-secondary-500/50 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 overflow-hidden group"
+          className="w-full relative bg-primary text-white px-8 py-4 text-lg rounded-xl hover:bg-primary-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-2xl hover:shadow-primary/50 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
         >
-          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></span>
           {status === 'loading' ? (
             <>
               <svg className="animate-spin h-5 w-5 relative" fill="none" viewBox="0 0 24 24">

@@ -16,24 +16,18 @@ export default function ServiceCard({
   return (
     <Link href={href} className="group block h-full">
       <div className="relative">
-        {/* Gradient glow effect */}
-        <div className="absolute -inset-0.5 bg-gradient-to-r from-primary-600 via-accent-600 to-secondary-600 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
-
-        <div className="relative bg-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 h-full border border-neutral-100 overflow-hidden">
-          {/* Subtle background gradient effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-accent-50/0 via-secondary-50/0 to-primary-50/0 group-hover:from-accent-50/30 group-hover:via-secondary-50/20 group-hover:to-primary-50/10 transition-all duration-500 rounded-2xl"></div>
-
+        <div className="relative bg-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 h-full border-2 border-neutral-100 hover:border-primary overflow-hidden">
           <div className="relative z-10">
             {icon && (
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-600 via-secondary-500 to-accent-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
+              <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg">
                 {getIcon(icon)}
               </div>
             )}
-            <h3 className="text-2xl font-bold text-neutral-900 mb-4 group-hover:text-accent-600 transition-colors duration-300 font-heading">
+            <h3 className="text-2xl font-bold text-neutral-900 mb-4 group-hover:text-primary transition-colors duration-300 font-heading">
               {title}
             </h3>
             <p className="text-neutral-600 mb-6 leading-relaxed">{description}</p>
-            <span className="text-accent-600 font-semibold inline-flex items-center group-hover:gap-3 transition-all duration-300">
+            <span className="text-primary font-semibold inline-flex items-center group-hover:gap-3 transition-all duration-300">
               Learn more
               <svg
                 className="w-5 h-5 ml-1 group-hover:translate-x-2 transition-transform duration-300"

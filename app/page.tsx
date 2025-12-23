@@ -55,7 +55,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <Hero
-        title="Connecting companies with top data talent — fast."
+        title="Connecting companies with top data talent, fast."
         subtitle="We specialize in hiring data engineers, data scientists, and analytics professionals who drive business impact."
         primaryCTA={{ text: 'Hire Talent', href: '/contact' }}
         secondaryCTA={{ text: 'Join as Candidate', href: '/candidates' }}
@@ -113,23 +113,20 @@ export default function Home() {
                 description: 'Sourced across channels ensuring fastest access to relevant talent.',
               },
             ].map((feature, index) => {
-              const gradients = [
-                { from: 'from-accent-600', to: 'to-primary-600' },
-                { from: 'from-secondary-600', to: 'to-accent-600' },
-                { from: 'from-primary-600', to: 'to-secondary-600' },
-                { from: 'from-accent-600', to: 'to-secondary-600' }
-              ];
-              const bgColors = [
-                'bg-gradient-to-br from-accent-100 to-accent-50',
-                'bg-gradient-to-br from-secondary-100 to-secondary-50',
-                'bg-gradient-to-br from-primary-100 to-primary-50',
-                'bg-gradient-to-br from-accent-100 to-accent-50'
-              ];
               return (
                 <div key={index} className="text-center group relative">
-                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradients[index].from} ${gradients[index].to} rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500`}></div>
-                  <div className="relative bg-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-500 border border-neutral-100 h-full flex flex-col">
-                    <div className={`w-20 h-20 ${bgColors[index]} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`relative bg-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-neutral-100 h-full flex flex-col ${
+                    index === 0 ? 'hover:border-primary-500' :
+                    index === 1 ? 'hover:border-secondary-500' :
+                    index === 2 ? 'hover:border-accent-500' :
+                    'hover:border-primary-500'
+                  }`}>
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 ${
+                      index === 0 ? 'bg-primary-50' :
+                      index === 1 ? 'bg-secondary-50' :
+                      index === 2 ? 'bg-accent-50' :
+                      'bg-primary-50'
+                    }`}>
                       {feature.icon}
                     </div>
                     <h3 className="text-xl font-bold text-neutral-900 mb-3">
@@ -261,25 +258,24 @@ export default function Home() {
                 },
               ].map((process, index) => {
                 const stepColors = [
-                  'text-accent-100',
-                  'text-secondary-100',
-                  'text-primary-100',
-                  'text-accent-100'
+                  'text-accent-200',
+                  'text-secondary-200',
+                  'text-primary-200',
+                  'text-accent-200'
                 ];
-                const gradients = [
-                  { from: 'from-accent-600', to: 'to-primary-600' },
-                  { from: 'from-secondary-600', to: 'to-accent-600' },
-                  { from: 'from-primary-600', to: 'to-secondary-600' },
-                  { from: 'from-accent-600', to: 'to-secondary-600' }
-                ];
+                const bgColors = ['bg-accent', 'bg-secondary', 'bg-primary', 'bg-accent'];
                 return (
                   <div key={index} className="group relative">
-                    <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradients[index].from} ${gradients[index].to} rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500`}></div>
-                    <div className="relative bg-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 border border-neutral-100 h-full flex flex-col">
+                    <div className={`relative bg-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-neutral-100 h-full flex flex-col ${
+                      index === 0 ? 'hover:border-accent-500' :
+                      index === 1 ? 'hover:border-secondary-500' :
+                      index === 2 ? 'hover:border-primary-500' :
+                      'hover:border-accent-500'
+                    }`}>
                       <div className={`absolute top-4 right-4 text-6xl font-bold ${stepColors[index]}`}>
                         {process.step}
                       </div>
-                      <div className={`w-16 h-16 bg-gradient-to-br ${process.gradient} rounded-xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300 ${bgColors[index]}`}>
                         {process.icon}
                       </div>
                       <h3 className="text-2xl font-bold text-neutral-900 mb-4">
@@ -360,18 +356,16 @@ export default function Home() {
                 )
               },
             ].map((industry, index) => {
-              const gradients = [
-                { from: 'from-accent-600', to: 'to-primary-600' },
-                { from: 'from-secondary-600', to: 'to-accent-600' },
-                { from: 'from-primary-600', to: 'to-secondary-600' },
-                { from: 'from-primary-600', to: 'to-accent-600' },
-                { from: 'from-primary-600', to: 'to-secondary-600' },
-                { from: 'from-secondary-600', to: 'to-accent-600' }
-              ];
               return (
                 <div key={index} className="group relative">
-                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradients[index].from} ${gradients[index].to} rounded-xl opacity-0 group-hover:opacity-100 blur transition-all duration-500`}></div>
-                  <div className="relative text-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 border border-neutral-100">
+                  <div className={`relative text-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 border-2 border-neutral-100 ${
+                    index === 0 ? 'hover:border-accent' :
+                    index === 1 ? 'hover:border-primary' :
+                    index === 2 ? 'hover:border-secondary' :
+                    index === 3 ? 'hover:border-accent' :
+                    index === 4 ? 'hover:border-primary' :
+                    'hover:border-secondary'
+                  }`}>
                     <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
                       {industry.icon}
                     </div>
@@ -447,24 +441,22 @@ export default function Home() {
                 roles: ['Prompt Engineer', 'LLM Engineer', 'AI Product Manager', 'GenAI Specialist', 'AI Ethics Lead'],
               },
             ].map((roleGroup, index) => {
-              const gradients = [
-                { from: 'from-primary-600', to: 'to-accent-600' },
-                { from: 'from-accent-600', to: 'to-secondary-600' },
-                { from: 'from-secondary-600', to: 'to-primary-600' },
-                { from: 'from-primary-600', to: 'to-secondary-600' },
-                { from: 'from-accent-600', to: 'to-primary-600' },
-                { from: 'from-secondary-600', to: 'to-accent-600' }
-              ];
               return (
                 <div key={index} className="group relative">
-                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradients[index].from} ${gradients[index].to} rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500`}></div>
-                  <div className="relative bg-white p-8 rounded-2xl border border-neutral-100 shadow-md hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
+                  <div className={`relative bg-white p-8 rounded-2xl border-2 border-neutral-100 shadow-md hover:shadow-2xl transition-all duration-500 h-full flex flex-col ${
+                    index === 0 ? 'hover:border-primary' :
+                    index === 1 ? 'hover:border-accent' :
+                    index === 2 ? 'hover:border-secondary' :
+                    index === 3 ? 'hover:border-primary' :
+                    index === 4 ? 'hover:border-accent' :
+                    'hover:border-secondary'
+                  }`}>
                     <h3 className="text-xl font-bold text-neutral-900 mb-4 pb-3 border-b border-neutral-200">
                       {roleGroup.category}
                     </h3>
                     <ul className="space-y-2">
                       {roleGroup.roles.map((role, idx) => {
-                        const iconColors = ['text-accent-600', 'text-secondary-600', 'text-primary-600'];
+                        const iconColors = ['text-accent', 'text-secondary', 'text-primary'];
                         const colorClass = iconColors[idx % 3];
                         return (
                           <li key={idx} className="flex items-center text-neutral-700">

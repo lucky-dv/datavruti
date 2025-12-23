@@ -515,7 +515,7 @@ export default function TalentPoolForm() {
                 disabled={step > currentStep}
                 className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-all ${
                   currentStep >= step
-                    ? 'bg-gradient-to-r from-accent-500 to-secondary-600 text-white'
+                    ? 'bg-accent text-white'
                     : 'bg-gray-200 text-gray-600'
                 } ${
                   step < currentStep
@@ -531,7 +531,7 @@ export default function TalentPoolForm() {
               {step < 3 && (
                 <div
                   className={`w-20 h-1 mx-2 ${
-                    currentStep > step ? 'bg-gradient-to-r from-accent-500 to-secondary-600' : 'bg-gray-200'
+                    currentStep > step ? 'bg-accent' : 'bg-gray-200'
                   }`}
                 ></div>
               )}
@@ -1305,7 +1305,7 @@ export default function TalentPoolForm() {
                   name="resume"
                   accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                   onChange={handleFileChange}
-                  className="block w-full text-sm text-neutral-700 file:mr-4 file:py-3 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-gradient-to-r file:from-accent-500 file:to-secondary-600 file:text-white hover:file:from-accent-600 hover:file:to-secondary-700 file:cursor-pointer border border-neutral-300 rounded-lg cursor-pointer focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
+                  className="block w-full text-sm text-neutral-700 file:mr-4 file:py-3 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-accent file:text-white hover:file:bg-accent-600 file:cursor-pointer border border-neutral-300 rounded-lg cursor-pointer focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
                   required
                 />
               </div>
@@ -1348,14 +1348,14 @@ export default function TalentPoolForm() {
             <button
               type="button"
               onClick={handleNext}
-              className="ml-auto px-6 py-3 bg-gradient-to-r from-accent-500 to-secondary-600 text-white rounded-lg hover:from-accent-600 hover:to-secondary-700 transition-all font-medium shadow-lg hover:shadow-xl"
+              className="ml-auto px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-600 transition-all font-medium shadow-lg hover:shadow-xl"
             >
               Next
             </button>
           ) : (
             <button
               type="submit"
-              className="ml-auto px-6 py-3 bg-gradient-to-r from-accent-500 to-secondary-600 text-white rounded-lg hover:from-accent-600 hover:to-secondary-700 transition-all font-medium shadow-lg hover:shadow-xl"
+              className="ml-auto px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-600 transition-all font-medium shadow-lg hover:shadow-xl"
             >
               Submit Application
             </button>

@@ -35,7 +35,7 @@ export default function CaseStudiesPage() {
         showCTAs={false}
       />
 
-      <section className="section-padding bg-gradient-to-br from-neutral-50 via-white to-accent-50/30">
+      <section className="section-padding bg-neutral-50">
         <div className="container-custom">
           <SectionHeader
             badge="Success Stories"

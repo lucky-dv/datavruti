@@ -15,7 +15,7 @@ export default function Navbar() {
       cta: false,
       icon: (isActive: boolean) => (
         <svg
-          className={`h-6 w-6 ${isActive ? 'text-primary-600' : 'text-neutral-400'}`}
+          className={`h-6 w-6 ${isActive ? 'text-accent' : 'text-neutral-400'}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -35,7 +35,7 @@ export default function Navbar() {
       cta: false,
       icon: (isActive: boolean) => (
         <svg
-          className={`h-6 w-6 ${isActive ? 'text-primary-600' : 'text-neutral-400'}`}
+          className={`h-6 w-6 ${isActive ? 'text-accent' : 'text-neutral-400'}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -55,7 +55,7 @@ export default function Navbar() {
       cta: false,
       icon: (isActive: boolean) => (
         <svg
-          className={`h-6 w-6 ${isActive ? 'text-primary-600' : 'text-neutral-400'}`}
+          className={`h-6 w-6 ${isActive ? 'text-accent' : 'text-neutral-400'}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -75,7 +75,7 @@ export default function Navbar() {
       cta: false,
       icon: (isActive: boolean) => (
         <svg
-          className={`h-6 w-6 ${isActive ? 'text-primary-600' : 'text-neutral-400'}`}
+          className={`h-6 w-6 ${isActive ? 'text-accent' : 'text-neutral-400'}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -95,7 +95,7 @@ export default function Navbar() {
       cta: false,
       icon: (isActive: boolean) => (
         <svg
-          className={`h-6 w-6 ${isActive ? 'text-primary-600' : 'text-neutral-400'}`}
+          className={`h-6 w-6 ${isActive ? 'text-accent' : 'text-neutral-400'}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -207,27 +207,23 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`transition-all duration-300 px-5 py-2.5 rounded-xl relative group overflow-hidden ${
+                    className={`transition-all duration-300 px-5 py-2.5 rounded-xl relative group ${
                       isActive
-                        ? 'text-white bg-gradient-to-r from-accent-500 via-accent-600 to-secondary-600 shadow-lg shadow-accent-500/30 font-semibold'
-                        : 'text-neutral-600 hover:text-accent-600 hover:bg-accent-50/80 hover:shadow-md font-medium'
+                        ? 'text-white bg-accent-700 shadow-lg shadow-accent/30 font-semibold'
+                        : 'text-neutral-600 hover:text-accent hover:bg-accent-50/80 hover:shadow-md font-medium'
                     }`}
                   >
-                    {isActive && (
-                      <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></span>
-                    )}
                     <span className="relative">{item.name}</span>
                     {!isActive && (
-                      <span className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-accent-500 to-accent-600 group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300 rounded-full"></span>
+                      <span className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-accent group-hover:w-1/2 group-hover:left-1/4 transition-all duration-300 rounded-full"></span>
                     )}
                   </Link>
                 );
               })}
               <Link
                 href="/contact"
-                className="ml-4 relative inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 via-secondary-600 to-primary-700 text-white px-7 py-3 rounded-xl hover:from-primary-700 hover:via-secondary-700 hover:to-primary-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:shadow-secondary-500/30 hover:scale-105 transform group overflow-hidden"
+                className="ml-4 relative inline-flex items-center gap-2 bg-primary-600 text-white px-7 py-3 rounded-xl hover:bg-primary-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl hover:shadow-primary/30 hover:scale-105 transform"
               >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></span>
                 <span className="relative">Hire Talent</span>
                 <svg className="relative w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -263,8 +259,8 @@ export default function Navbar() {
                     href={item.href}
                     className={`relative flex flex-col items-center gap-0.5 rounded-2xl px-1.5 py-0.5 transition-all duration-300 ${
                       isActive
-                        ? 'text-accent-600'
-                        : 'text-neutral-700 hover:text-accent-600'
+                        ? 'text-accent'
+                        : 'text-neutral-700 hover:text-accent'
                     }`}
                   >
                     <span
@@ -278,7 +274,7 @@ export default function Navbar() {
                     </span>
                     <span
                       className={`relative flex min-h-[16px] items-center justify-center px-0.5 text-[9px] font-semibold tracking-wide leading-tight text-center ${
-                        isActive ? 'text-accent-600' : 'text-neutral-700'
+                        isActive ? 'text-accent' : 'text-neutral-700'
                       }`}
                     >
                       {label}
@@ -292,7 +288,7 @@ export default function Navbar() {
               <Link
                 key={`mobile-bottom-${actionNav.name}`}
                 href={actionNav.href}
-                className="relative z-10 flex flex-col items-center gap-0.5 rounded-full bg-gradient-to-br from-primary-600 via-secondary-600 to-primary-700 p-1 text-white shadow-[0_18px_36px_rgba(231,60,55,0.45)] transition-transform duration-300 hover:scale-105"
+                className="relative z-10 flex flex-col items-center gap-0.5 rounded-full bg-primary p-1 text-white shadow-lg shadow-primary/40 transition-transform duration-300 hover:scale-105"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20">
                   {actionNav.icon(true)}

@@ -24,12 +24,12 @@ export default function SectionHeader({
   return (
     <div className={`flex flex-col ${alignmentClasses[align]} ${className}`}>
       {badge && (
-        <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-primary-100 to-accent-100 rounded-full text-sm font-semibold text-primary-700 mb-4">
+        <span className="inline-block px-4 py-1.5 bg-primary-100 rounded-full text-sm font-semibold text-primary-700 mb-4">
           {badge}
         </span>
       )}
       {typeof title === 'string' ? (
-        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-neutral-900 via-primary-800 to-neutral-900 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+        <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4 leading-tight pb-1">
           {title}
         </h2>
       ) : (

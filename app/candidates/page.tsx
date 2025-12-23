@@ -97,19 +97,24 @@ export default function CandidatesPage() {
                   description: 'Your information is kept confidential and only shared with your consent.',
                 },
               ].map((item, index) => {
-                const gradients = [
-                  { from: 'from-primary-600', to: 'to-accent-600' },
-                  { from: 'from-accent-600', to: 'to-secondary-600' },
-                  { from: 'from-secondary-600', to: 'to-primary-600' },
-                  { from: 'from-primary-600', to: 'to-secondary-600' },
-                  { from: 'from-accent-600', to: 'to-primary-600' },
-                  { from: 'from-secondary-600', to: 'to-accent-600' }
-                ];
                 return (
                   <div key={index} className="group relative">
-                    <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradients[index].from} ${gradients[index].to} rounded-xl opacity-0 group-hover:opacity-100 blur transition-all duration-500`}></div>
-                    <div className="relative flex gap-4 bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border border-neutral-100">
-                      <div className="flex-shrink-0 w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className={`relative flex gap-4 bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-neutral-100 ${
+                      index === 0 ? 'hover:border-primary' :
+                      index === 1 ? 'hover:border-accent' :
+                      index === 2 ? 'hover:border-secondary' :
+                      index === 3 ? 'hover:border-primary' :
+                      index === 4 ? 'hover:border-accent' :
+                      'hover:border-secondary'
+                    }`}>
+                      <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${
+                        index === 0 ? 'bg-primary-100' :
+                        index === 1 ? 'bg-accent-100' :
+                        index === 2 ? 'bg-secondary-100' :
+                        index === 3 ? 'bg-primary-100' :
+                        index === 4 ? 'bg-accent-100' :
+                        'bg-secondary-100'
+                      }`}>
                         {item.icon}
                       </div>
                       <div>
@@ -156,24 +161,22 @@ export default function CandidatesPage() {
                   roles: ['Data Architects', 'Solution Architects', 'Business Architects', 'Data Visualization Experts'],
                 },
               ].map((category, index) => {
-                const gradients = [
-                  { from: 'from-primary-600', to: 'to-accent-600' },
-                  { from: 'from-accent-600', to: 'to-secondary-600' },
-                  { from: 'from-secondary-600', to: 'to-primary-600' },
-                  { from: 'from-primary-600', to: 'to-secondary-600' }
-                ];
                 return (
                   <div key={index} className="group relative">
-                    <div className={`absolute -inset-0.5 bg-gradient-to-r ${gradients[index].from} ${gradients[index].to} rounded-xl opacity-0 group-hover:opacity-100 blur transition-all duration-500`}></div>
-                    <div className="relative bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border border-neutral-100 h-full flex flex-col">
-                      <h3 className="text-lg font-bold text-neutral-900 mb-4 pb-2 border-b-2 border-accent-500">
+                    <div className={`relative bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-neutral-100 h-full flex flex-col ${
+                      index === 0 ? 'hover:border-primary' :
+                      index === 1 ? 'hover:border-accent' :
+                      index === 2 ? 'hover:border-secondary' :
+                      'hover:border-primary'
+                    }`}>
+                      <h3 className="text-lg font-bold text-neutral-900 mb-4 pb-2 border-b-2 border-accent">
                         {category.title}
                       </h3>
                       <ul className="space-y-2">
                         {category.roles.map((role, idx) => (
                           <li key={idx} className="flex items-start text-sm text-neutral-600">
                             <svg
-                              className="w-4 h-4 text-accent-600 mr-2 mt-0.5 flex-shrink-0"
+                              className="w-4 h-4 text-accent mr-2 mt-0.5 flex-shrink-0"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -207,10 +210,9 @@ export default function CandidatesPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="group relative">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary-600 to-accent-600 rounded-xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
-                <div className="relative bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border border-neutral-100">
+                <div className="relative bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-neutral-100 hover:border-primary">
                   <h3 className="text-xl font-bold text-neutral-900 mb-4 flex items-center">
-                    <svg className="w-6 h-6 text-accent-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-6 h-6 text-accent mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                     Industries
@@ -218,7 +220,7 @@ export default function CandidatesPage() {
                   <ul className="grid grid-cols-2 gap-3">
                     {['BFSI', 'Retail', 'Manufacturing', 'eCommerce', 'Telecom', 'Healthcare', 'Automotive', 'Chemicals'].map((industry) => (
                       <li key={industry} className="flex items-center text-neutral-700">
-                        <span className="w-2 h-2 bg-accent-500 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-accent rounded-full mr-2"></span>
                         {industry}
                       </li>
                     ))}
@@ -226,10 +228,9 @@ export default function CandidatesPage() {
                 </div>
               </div>
               <div className="group relative">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-secondary-600 to-primary-600 rounded-xl opacity-0 group-hover:opacity-100 blur transition-all duration-500"></div>
-                <div className="relative bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border border-neutral-100">
+                <div className="relative bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 border-2 border-neutral-100 hover:border-secondary">
                   <h3 className="text-xl font-bold text-neutral-900 mb-4 flex items-center">
-                    <svg className="w-6 h-6 text-secondary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-6 h-6 text-secondary mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                     </svg>
                     Cloud Platforms
@@ -237,7 +238,7 @@ export default function CandidatesPage() {
                   <ul className="grid grid-cols-2 gap-3">
                     {['AWS', 'Azure', 'GCP', 'Oracle Cloud'].map((cloud) => (
                       <li key={cloud} className="flex items-center text-neutral-700">
-                        <span className="w-2 h-2 bg-secondary-500 rounded-full mr-2"></span>
+                        <span className="w-2 h-2 bg-secondary rounded-full mr-2"></span>
                         {cloud}
                       </li>
                     ))}
@@ -258,7 +259,7 @@ export default function CandidatesPage() {
       </section>
 
       {/* Application Form */}
-      <section className="section-padding bg-gradient-to-b from-neutral-50 to-white">
+      <section className="section-padding bg-neutral-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <SectionHeader
@@ -269,7 +270,7 @@ export default function CandidatesPage() {
               className="mb-12"
             />
             <div className="bg-white p-8 md:p-12 rounded-xl shadow-xl border border-neutral-200">
-              <div className="mb-8 p-6 bg-gradient-to-r from-primary-50 to-accent-50 rounded-lg border-l-4 border-primary-500">
+              <div className="mb-8 p-6 bg-primary-50 rounded-lg border-l-4 border-primary">
                 <h3 className="text-lg font-semibold text-neutral-900 mb-2">
                   📋 Quick Application Process
                 </h3>

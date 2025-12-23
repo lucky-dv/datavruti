@@ -29,21 +29,21 @@ export default function Hero({
   return (
     <section className={`${
       isDark
-        ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'
-        : 'bg-gradient-to-br from-slate-50 via-white to-slate-50'
+        ? 'bg-slate-900'
+        : 'bg-slate-50'
     } section-padding relative overflow-hidden`}>
       {/* Background decoration */}
       {isDark ? (
         <>
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary-600/20 rounded-full blur-3xl animate-blob"></div>
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-accent-600/20 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-secondary-500/15 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-secondary/15 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
         </>
       ) : (
         <>
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary-300/25 rounded-full blur-3xl animate-blob"></div>
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-accent-300/25 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-secondary-300/20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/25 rounded-full blur-3xl animate-blob"></div>
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-accent/25 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
         </>
       )}
 

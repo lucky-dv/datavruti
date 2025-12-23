@@ -43,7 +43,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-32 pb-20">
+      <section className="relative overflow-hidden bg-slate-900 text-white pt-32 pb-20">
         <AnimatedBackground variant="vibrant" />
 
         <div className="container-custom relative z-10">
@@ -58,11 +58,11 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               <span className="font-medium">Back to Case Studies</span>
             </Link>
             <div className="mb-6">
-              <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-primary-500/20 to-accent-500/20 backdrop-blur-sm border border-primary-400/30 rounded-full text-sm font-semibold text-primary-300">
+              <span className="inline-block px-4 py-1.5 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full text-sm font-semibold text-primary-300">
                 {caseStudy.industry}
               </span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-white via-primary-200 to-white bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
               {caseStudy.title}
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-8">
@@ -75,7 +75,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl px-6 py-4 border border-slate-700/50">
                 <p className="text-sm text-slate-400 mb-1">Placements</p>
-                <p className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+                <p className="text-2xl font-bold text-accent">
                   {caseStudy.placements}
                 </p>
               </div>
@@ -91,7 +91,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
               {/* Challenge */}
               <div className="md:col-span-3">
-                <GlowCard gradientFrom="from-primary-600" gradientVia="via-accent-600" gradientTo="to-secondary-600" className="bg-gradient-to-br from-neutral-50 to-white">
+                <GlowCard borderHover="hover:border-primary" className="bg-neutral-50">
                   <div className="flex items-center gap-3 mb-4">
                     <IconBadge
                       icon={
@@ -99,8 +99,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                         </svg>
                       }
-                      gradientFrom="from-primary-500"
-                      gradientTo="to-accent-600"
+                      bgColor="bg-primary"
                     />
                     <h2 className="text-2xl md:text-3xl font-bold text-neutral-900">The Challenge</h2>
                   </div>
@@ -112,7 +111,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
               {/* Solution */}
               <div className="md:col-span-3">
-                <GlowCard gradientFrom="from-accent-600" gradientVia="via-secondary-600" gradientTo="to-primary-600" className="bg-gradient-to-br from-white to-accent-50/30">
+                <GlowCard borderHover="hover:border-accent" className="bg-white">
                   <div className="flex items-center gap-3 mb-4">
                     <IconBadge
                       icon={
@@ -120,8 +119,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                         </svg>
                       }
-                      gradientFrom="from-accent-500"
-                      gradientTo="to-secondary-600"
+                      bgColor="bg-accent"
                     />
                     <h2 className="text-2xl md:text-3xl font-bold text-neutral-900">Our Solution</h2>
                   </div>
@@ -133,7 +131,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
 
               {/* Result */}
               <div className="md:col-span-3">
-                <GlowCard gradientFrom="from-secondary-600" gradientVia="via-primary-600" gradientTo="to-accent-600" className="bg-gradient-to-br from-primary-50/50 to-white">
+                <GlowCard borderHover="hover:border-secondary" className="bg-primary-50">
                   <div className="flex items-center gap-3 mb-4">
                     <IconBadge
                       icon={
@@ -141,8 +139,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       }
-                      gradientFrom="from-secondary-500"
-                      gradientTo="to-primary-600"
+                      bgColor="bg-secondary"
                     />
                     <h2 className="text-2xl md:text-3xl font-bold text-neutral-900">The Results</h2>
                   </div>
@@ -156,16 +153,16 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             {/* Testimonial Section */}
             {caseStudy.testimonial && (
               <div className="mb-16">
-                <GlowCard gradientFrom="from-primary-600" gradientVia="via-secondary-600" gradientTo="to-accent-600" className="bg-gradient-to-br from-slate-50 to-white">
+                <GlowCard borderHover="hover:border-accent" className="bg-slate-50">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent-500 to-secondary-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                      <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center text-white text-2xl font-bold shadow-lg">
                         {caseStudy.testimonial.name.charAt(0)}
                       </div>
                     </div>
                     <div className="flex-1">
                       <div className="flex items-start gap-3 mb-4">
-                        <svg className="w-8 h-8 text-accent-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-8 h-8 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                         </svg>
                         <p className="text-lg text-neutral-700 leading-relaxed italic">
@@ -184,7 +181,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             )}
 
             {/* CTA Section */}
-            <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-12 text-center">
+            <div className="relative overflow-hidden bg-slate-900 rounded-3xl p-12 text-center">
               <AnimatedBackground variant="subtle" />
 
               <div className="relative z-10">

@@ -260,34 +260,25 @@ export default function Chatbot() {
         {/* Mobile: Slim vertical tab */}
         <div className="md:hidden">
           <div className="relative">
-            {/* Glowing effect */}
-            <div className="absolute -inset-1 bg-gradient-to-br from-accent-400 to-secondary-500 rounded-l-2xl opacity-75 blur-md animate-pulse"></div>
-
             {/* Main button */}
-            <div className="relative w-12 h-16 bg-gradient-to-br from-accent-500 to-secondary-600 rounded-l-2xl shadow-2xl flex items-center justify-center border-l-2 border-t-2 border-b-2 border-white/20">
+            <div className="relative w-12 h-16 bg-accent rounded-l-2xl shadow-2xl flex items-center justify-center border-l-2 border-t-2 border-b-2 border-white/20">
               <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
               </svg>
               {/* Notification badge */}
-              <div className="absolute -top-1 -left-1 w-5 h-5 bg-gradient-to-br from-red-500 to-red-600 rounded-full border-2 border-white shadow-lg flex items-center justify-center text-white text-xs font-bold">
+              <div className="absolute -top-1 -left-1 w-5 h-5 bg-primary rounded-full border-2 border-white shadow-lg flex items-center justify-center text-white text-xs font-bold">
                 1
               </div>
             </div>
           </div>
         </div>
 
-        {/* Desktop: Round glassmorphic button */}
+        {/* Desktop: Round button */}
         <div className="hidden md:block relative">
-          {/* Animated gradient ring */}
-          <div className="absolute -inset-3 bg-gradient-to-r from-accent-400 via-secondary-500 to-primary-500 rounded-full blur-2xl opacity-50 group-hover:opacity-75 animate-pulse"></div>
-
-          {/* Outer ring with rotation */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-accent-500 to-secondary-600 rounded-full opacity-75 group-hover:opacity-100 transition-all duration-300 animate-spin-slow"></div>
-
-          {/* Main button - Modern glassmorphism */}
-          <div className="relative w-16 h-16 bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-xl rounded-full flex items-center justify-center shadow-2xl group-hover:shadow-accent-500/50 group-hover:scale-110 transition-all duration-300 border border-white/20">
-            {/* Icon container with gradient */}
-            <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-secondary-600 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+          {/* Main button */}
+          <div className="relative w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:shadow-accent/50 group-hover:scale-110 transition-all duration-300 border-2 border-accent">
+            {/* Icon container */}
+            <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
               <svg
                 className="w-7 h-7 text-white"
                 fill="none"
@@ -305,8 +296,8 @@ export default function Chatbot() {
 
             {/* Notification badge with pulse */}
             <div className="absolute -top-1 -right-1 flex items-center justify-center">
-              <span className="absolute w-5 h-5 bg-red-500 rounded-full animate-ping opacity-75"></span>
-              <span className="relative w-5 h-5 bg-gradient-to-br from-red-500 to-red-600 rounded-full border-2 border-white shadow-lg flex items-center justify-center text-white text-xs font-bold">1</span>
+              <span className="absolute w-5 h-5 bg-primary rounded-full animate-ping opacity-75"></span>
+              <span className="relative w-5 h-5 bg-primary rounded-full border-2 border-white shadow-lg flex items-center justify-center text-white text-xs font-bold">1</span>
             </div>
           </div>
         </div>
@@ -315,18 +306,11 @@ export default function Chatbot() {
       {/* Chatbot Window - Ultra Modern Design */}
       {isOpen && (
         <div className="fixed bottom-[6.5625rem] md:bottom-8 right-4 md:right-8 z-50 w-[calc(100vw-2rem)] md:w-[28rem] h-[36rem] flex flex-col animate-scale-in origin-bottom-right">
-          {/* Glassmorphism container */}
-          <div className="relative flex flex-col h-full bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 overflow-hidden">
-            {/* Gradient background overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-accent-500/5 via-transparent to-secondary-500/5 pointer-events-none"></div>
+          {/* Container */}
+          <div className="relative flex flex-col h-full bg-white rounded-3xl shadow-2xl border-2 border-neutral-200 overflow-hidden">
 
-            {/* Header - Modern gradient with glassmorphism */}
-            <div className="relative bg-gradient-to-r from-accent-500 via-accent-600 to-secondary-600 p-6 shadow-lg">
-              {/* Animated background pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 animate-shimmer"></div>
-              </div>
-
+            {/* Header - Solid color */}
+            <div className="relative bg-accent p-6 shadow-lg">
               <div className="relative flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   {/* Avatar with status indicator */}
@@ -375,7 +359,7 @@ export default function Chatbot() {
             </div>
 
             {/* Messages Area - Modern scrollbar */}
-            <div className="relative flex-1 overflow-y-auto px-4 py-6 space-y-4 bg-gradient-to-b from-neutral-50/50 to-white/50 custom-scrollbar">
+            <div className="relative flex-1 overflow-y-auto px-4 py-6 space-y-4 bg-neutral-50 custom-scrollbar">
               {messages.length === 1 && (
                 <div className="mb-4">
                   <p className="text-xs text-center text-neutral-500 mb-4">Quick questions:</p>
@@ -402,7 +386,7 @@ export default function Chatbot() {
                   <div className={`flex items-end space-x-2 max-w-[85%] ${message.role === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
                     {/* Avatar */}
                     {message.role === 'assistant' && (
-                      <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-accent-500 to-secondary-600 flex items-center justify-center flex-shrink-0 shadow-md">
+                      <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center flex-shrink-0 shadow-md">
                         <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                         </svg>
@@ -413,7 +397,7 @@ export default function Chatbot() {
                     <div
                       className={`px-4 py-3 rounded-2xl shadow-md ${
                         message.role === 'user'
-                          ? 'bg-gradient-to-br from-accent-500 to-secondary-600 text-white rounded-br-md'
+                          ? 'bg-accent text-white rounded-br-md'
                           : 'bg-white border border-neutral-200 text-neutral-800 rounded-bl-md'
                       }`}
                     >
@@ -428,16 +412,16 @@ export default function Chatbot() {
               {isLoading && (
                 <div className="flex justify-start animate-fade-in">
                   <div className="flex items-end space-x-2">
-                    <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-accent-500 to-secondary-600 flex items-center justify-center shadow-md">
+                    <div className="w-8 h-8 rounded-xl bg-accent flex items-center justify-center shadow-md">
                       <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                       </svg>
                     </div>
                     <div className="bg-white border border-neutral-200 rounded-2xl rounded-bl-md px-4 py-3 shadow-md">
                       <div className="flex space-x-1.5">
-                        <div className="w-2.5 h-2.5 bg-accent-500 rounded-full animate-bounce"></div>
-                        <div className="w-2.5 h-2.5 bg-secondary-500 rounded-full animate-bounce delay-100"></div>
-                        <div className="w-2.5 h-2.5 bg-primary-500 rounded-full animate-bounce delay-200"></div>
+                        <div className="w-2.5 h-2.5 bg-accent rounded-full animate-bounce"></div>
+                        <div className="w-2.5 h-2.5 bg-secondary rounded-full animate-bounce delay-100"></div>
+                        <div className="w-2.5 h-2.5 bg-primary rounded-full animate-bounce delay-200"></div>
                       </div>
                     </div>
                   </div>
@@ -461,7 +445,7 @@ export default function Chatbot() {
                 <button
                   onClick={handleSend}
                   disabled={!input.trim() || isLoading}
-                  className="px-5 py-3 bg-gradient-to-r from-accent-500 to-secondary-600 text-white rounded-2xl hover:from-accent-600 hover:to-secondary-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl flex items-center justify-center group"
+                  className="px-5 py-3 bg-accent text-white rounded-2xl hover:bg-accent-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl flex items-center justify-center group"
                 >
                   <svg
                     className="w-5 h-5 group-hover:translate-x-0.5 transition-transform"
