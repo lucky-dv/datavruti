@@ -14,19 +14,34 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.ap
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Recruitment Agency For Data Professionals | Hire Data Engineers, Scientists & Analysts',
-    description: 'datavruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
+    title: 'Hire Data Professionals in India | Perm & C2C | datavruti',
+    description: 'Highly curated talent, available to join soon on permanent or contract roles. Write to sales@datavruti.com',
     alternates: {
       canonical: siteUrl,
     },
     openGraph: {
+      type: 'website',
       url: siteUrl,
-      title: 'Data Recruitment Agency | Hire Data Engineers, Scientists & Analysts',
-      description: 'datavruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
+      siteName: 'Datavruti',
+      title: 'Hire Data Professionals in India | Perm & C2C | datavruti',
+      description: 'Highly curated talent, available to join soon on permanent or contract roles. Write to sales@datavruti.com',
+      locale: 'en_IN',
+      images: [
+        {
+          url: `${siteUrl}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: 'Datavruti - Recruitment Agency for Data Professionals',
+        },
+      ],
     },
     twitter: {
-      title: 'Data Recruitment Agency | Hire Data Engineers, Scientists & Analysts',
-      description: 'datavruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
+      card: 'summary_large_image',
+      site: '@datavruti',
+      creator: '@datavruti',
+      title: 'Hire Data Professionals in India | Perm & C2C | datavruti',
+      description: 'Highly curated talent, available to join soon on permanent or contract roles. Write to sales@datavruti.com',
+      images: [`${siteUrl}/og-image.png`],
     },
   };
 }
