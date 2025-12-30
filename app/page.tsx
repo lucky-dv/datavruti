@@ -14,7 +14,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.ap
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Data Recruitment Agency | Hire Data Engineers, Scientists & Analysts',
+    title: 'Recruitment Agency For Data Professionals | Hire Data Engineers, Scientists & Analysts',
     description: 'datavruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
     alternates: {
       canonical: siteUrl,
