@@ -34,7 +34,7 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="scroll-to-top-button fixed bottom-[6.25rem] left-0 md:bottom-8 md:left-8 z-50 group animate-fade-in-up"
+          className="scroll-to-top-button fixed bottom-[7.5rem] left-0 md:bottom-8 md:left-8 z-50 group animate-fade-in-up"
           aria-label="Scroll to top"
         >
           {/* Mobile: Slim vertical tab */}

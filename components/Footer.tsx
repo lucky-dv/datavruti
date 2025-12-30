@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-accent-500/8 rounded-full blur-3xl"></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-secondary-500/6 rounded-full blur-3xl"></div>
 
-      <div className="container-custom py-20 relative z-10">
+      <div className="container-custom py-20 pb-32 md:pb-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-5">
