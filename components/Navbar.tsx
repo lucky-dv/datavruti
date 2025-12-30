@@ -185,7 +185,7 @@ export default function Navbar() {
         <div className="container-custom">
           <div className="flex h-20 items-center justify-center md:justify-between">
             <Link href="/" className="flex items-center group">
-              <div className="relative h-14 md:h-16 px-3 py-2">
+              <div className="relative h-20 md:h-16 px-3 py-2">
                 <Image
                   src="/datavruti-full.png"
                   alt="datavruti Logo"
