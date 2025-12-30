@@ -1,8 +1,20 @@
 {
-  "mission": "To bridge the gap between exceptional data talent and innovative companies, enabling organizations to unlock the full potential of their data.",
-  "vision": "To be the most trusted partner for data and analytics hiring, recognized for our deep technical expertise and commitment to perfect matches.",
-  "story": "DataVruti is a specialist recruitment firm helping global enterprises and Series A+ startups hire top talent in India.\n\nIn 2018, we started building a rocketship but failed. Eventually, we found our calling in helping other leaders build theirs. From Series A+ funded startups to global organizations, we've hired across roles, levels, and geographies.\n\nOur founders, coming from technical and recruitment backgrounds themselves, understood these challenges firsthand. They built DataVruti to be more than a recruitment agency—we're operators who also recruit, bringing 50+ years of combined experience with deep understanding of the industries we operate in.",
+  "mission": "Make real work visible and verifiable for humans, and discoverable by machines.",
+  "vision": "Capture real work, structure it early, and test it in real hiring decisions.",
+  "story": "datavruti is a specialist recruitment firm helping global enterprises and Series A+ startups hire top talent in India.\n\nIn 2018, we started building a rocketship but failed. Eventually, we found our calling in helping other leaders build theirs. From Series A+ funded startups to global organizations, we've hired across roles, levels, and geographies.\n\nOur founders, coming from technical and recruitment backgrounds themselves, understood these challenges firsthand. They built datavruti to be more than a recruitment agency—we're operators who also recruit, bringing 50+ years of combined experience with deep understanding of the industries we operate in.",
   "clientTypes": "Trusted by 50+ clients including one of the world's top 5 analytics firms, one of the world's largest consumer electronics firms, one of the world's largest FMCG companies, a 150-year-old global investment management firm, a 22-year-old US-based IT services company, one of the US's largest IT players in the insurance P&C domain, leading conversational AI SaaS startup, leading Revenue Growth Management (Supply Chain AI) SaaS startup, a large Big 4, and many more.",
+  "clientList": [
+    "One of the world's top 5 analytics firms",
+    "One of the world's largest consumer electronics firms",
+    "One of the world's largest FMCG companies",
+    "A 150-year-old global investment management firm",
+    "A 22-year-old US-based IT services company",
+    "One of the US's largest IT players in insurance P&C",
+    "Leading conversational AI SaaS startup",
+    "Leading Revenue Growth Management (Supply Chain AI) SaaS startup",
+    "A large Big 4 firm",
+    "And 40+ more global enterprises"
+  ],
   "values": [
     {
       "title": "Technical Excellence",
@@ -95,20 +107,11 @@
   ],
   "partnerLogos": [
     { "name": "AB Mauri", "image": "/AB Mauri.png" },
-    { "name": "Accenture", "image": "/accenture-logo.avif" },
-    { "name": "American Express", "image": "/amex-logo.avif" },
     { "name": "Asper.ai", "image": "/Asper.ai.png" },
-    { "name": "Bank of America", "image": "/bofa-logo.avif" },
     { "name": "Builder.io", "image": "/Builder.io.png" },
     { "name": "C5I", "image": "/C5I.png" },
-    { "name": "Capgemini", "image": "/capgemini-logo.avif" },
-    { "name": "Deloitte", "image": "/deloitte-logo.avif" },
-    { "name": "EY", "image": "/ey-logo.avif" },
     { "name": "Flyfish.ai", "image": "/Flyfish.ai.png" },
     { "name": "Fractal", "image": "/Fractal.png" },
-    { "name": "Globant", "image": "/globant-logo.avif" },
-    { "name": "Gramener", "image": "/gramener-logo.avif" },
-    { "name": "Grey Chain", "image": "/Grey Chain.png" },
     { "name": "Growthsphere.ai", "image": "/Growthsphere.ai.png" },
     { "name": "Hinduja Housing Finance", "image": "/Hinduja Housing Finance.png" },
     { "name": "Intraedge", "image": "/Intraedge.png" },
@@ -117,14 +120,8 @@
     { "name": "Mavenark", "image": "/Mavenark.png" },
     { "name": "MDManage", "image": "/MDManage.png" },
     { "name": "Principal", "image": "/Principal.png" },
-    { "name": "PwC", "image": "/pwc-logo.avif" },
-    { "name": "Quantum Phinance", "image": "/Quantum Phinance.png" },
     { "name": "SG Analytics", "image": "/SG Analytics.png" },
-    { "name": "Sigmoid", "image": "/sigmoid-logo.avif" },
-    { "name": "Tavant", "image": "/tavant-logo.avif" },
     { "name": "Theremin", "image": "/Theremin.png" },
-    { "name": "Tiger Analytics", "image": "/tiger-analytics-logo.avif" },
-    { "name": "Unilever", "image": "/Unilever.png" },
-    { "name": "UST", "image": "/ust-logo.avif" }
+    { "name": "Unilever", "image": "/Unilever.png" }
   ]
 }

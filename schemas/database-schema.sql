@@ -1,4 +1,4 @@
--- DataVruti Recruitment System Database Schema
+-- datavruti Recruitment System Database Schema
 -- Database: PostgreSQL (recommended) or MySQL
 -- Created for comprehensive recruitment management system
 

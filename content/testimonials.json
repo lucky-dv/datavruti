@@ -2,10 +2,18 @@
   {
     "id": 1,
     "name": "Guha Athreya",
-    "position": "Chief Product Officer",
-    "company": "Current customer at Ai Palette and previously at Asper.ai",
+    "position": "Global VP - Delivery, Engineering & Customer Success",
+    "company": "3X customer at Quant.ai, AI Palette and Asper.ai",
     "image": "/images/team/guha-athreya.jpg",
     "content": "I have had the pleasure of working with Vikram and his recruitment agency on multiple occasions, and each time, they have exceeded my expectations. Their unique approach to understanding the specific needs of the job beyond the written description has resulted in a consistently high success rate in finding the right talent, especially for niche roles. His thorough vetting process makes him an invaluable partner. I highly recommend Vikram and his team to anyone looking for top-tier recruitment services.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Milan Sahu",
+    "position": "Delivery Director",
+    "company": "Fractal Analytics",
+    "content": "I engaged with Vikram and his team at Datavruti during my tenure as Delivery Director at an AI company when I was seeking top-quality profiles in analytics, data engineering, and data science domains. From the outset, their deep understanding of these niche areas and commitment to quality stood out. The team consistently provided thoroughly vetted candidates after detailed discussions, ensuring alignment with our specific technical and cultural requirements. Their quick turnaround times and focus on delivering the right fit exceeded my expectations, making the hiring process smooth and efficient. Overall, Vikram's team demonstrated exceptional expertise, speed, and dedication to quality, which made them a trusted partner for our talent acquisition needs.",
     "rating": 5
   }
 ]

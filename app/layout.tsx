@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.datavruti.com'),
   title: {
     default: defaultSEO.title as string,
-    template: '%s | DataVruti - Global Data Talent Recruitment',
+    template: '%s | datavruti - Global Data Talent Recruitment',
   },
   description: defaultSEO.description,
   keywords: [
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     'SaaS recruitment',
     'startup hiring',
   ],
-  authors: [{ name: 'DataVruti' }],
+  authors: [{ name: 'datavruti' }],
   creator: 'Reflion Tech Private Limited',
-  publisher: 'DataVruti',
+  publisher: 'datavruti',
   formatDetection: {
     email: false,
     address: false,
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: defaultSEO.canonical,
-    siteName: 'DataVruti',
+    siteName: 'datavruti',
     title: defaultSEO.title as string,
     description: defaultSEO.description as string,
     images: [
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
         url: '/datavruti-full.jpg',
         width: 1200,
         height: 630,
-        alt: 'DataVruti - Global Data Talent Recruitment',
+        alt: 'datavruti - Global Data Talent Recruitment',
       },
     ],
   },

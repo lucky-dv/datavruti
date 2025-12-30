@@ -188,7 +188,7 @@ export default function Navbar() {
               <div className="relative h-14 md:h-16 px-3 py-2">
                 <Image
                   src="/datavruti-full.png"
-                  alt="DataVruti Logo"
+                  alt="datavruti Logo"
                   width={180}
                   height={64}
                   className="object-contain h-full w-auto group-hover:scale-105 transition-transform duration-300"

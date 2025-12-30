@@ -15,18 +15,18 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.ap
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Data Recruitment Agency | Hire Data Engineers, Scientists & Analysts',
-    description: 'DataVruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
+    description: 'datavruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
     alternates: {
       canonical: siteUrl,
     },
     openGraph: {
       url: siteUrl,
       title: 'Data Recruitment Agency | Hire Data Engineers, Scientists & Analysts',
-      description: 'DataVruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
+      description: 'datavruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
     },
     twitter: {
       title: 'Data Recruitment Agency | Hire Data Engineers, Scientists & Analysts',
-      description: 'DataVruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
+      description: 'datavruti is a specialized data recruitment agency connecting companies with top data talent. We help you hire skilled data engineers, data scientists, and analytics professionals globally.',
     },
   };
 }
@@ -55,8 +55,10 @@ export default function Home() {
 
       {/* Hero Section */}
       <Hero
-        title="Connecting companies with top data talent, fast."
-        subtitle="We specialize in hiring data engineers, data scientists, and analytics professionals who drive business impact."
+        title="Specialists in hiring all things data
+"
+        subtitle="datavruti helps global enterprises and well funded startups in India and the US to hire deeply curated data talent, from Data Analysts to PhDs and everything in between.
+"
         primaryCTA={{ text: 'Hire Talent', href: '/contact' }}
         secondaryCTA={{ text: 'Apply Now', href: '/apply' }}
         variant="dark"
@@ -70,7 +72,7 @@ export default function Home() {
               Why Choose datavruti
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              We're not just recruiters—we're data hiring specialists who understand your unique challenges
+              We hire for you like it’s our brand, our money and our reputation at stake.
             </p>
           </div>
 
@@ -83,7 +85,7 @@ export default function Home() {
                   </svg>
                 ),
                 title: 'Specialized Focus',
-                description: 'Exclusively focused on data, analytics, and AI roles—we speak your language.',
+                description: 'Exclusively focused on data, analytics, and AI roles. We speak your language.',
               },
               {
                 icon: (
@@ -170,11 +172,8 @@ export default function Home() {
               Our Specialized Services
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-4">
-              We focus exclusively on data, analytics, and AI roles—from Data Analysts to PhDs and everything in between.
-            </p>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              Our specialized approach means we understand the technical nuances of every role and can accurately assess candidate capabilities.
-            </p>
+Whether you are looking for an experienced strategic partner to guide your talent function or need to attract top talent for niche roles or deploy resources on a short notice - we've got you covered.            </p>
+
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -215,7 +214,7 @@ export default function Home() {
                 {
                   step: '01',
                   title: 'Discovery & Requirements',
-                  description: 'We start with a deep dive into your needs—technical stack, team culture, growth plans, and specific role requirements. We believe in understanding the "why" behind every hire.',
+                  description: 'We start with a deep dive into your needs - tech stack, team culture, growth plans, and specific role requirements. We believe in understanding the "why" behind every hire.',
                   icon: (
                     <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -237,7 +236,7 @@ export default function Home() {
                 {
                   step: '03',
                   title: 'Candidate Presentation',
-                  description: 'We present only the best-matched candidates with detailed profiles, technical assessments, and our insights. Quality over quantity—always.',
+                  description: 'We present only the best-matched candidates with detailed profiles, technical screening, and our insights. Quality over quantity, always.',
                   icon: (
                     <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -418,27 +417,27 @@ export default function Home() {
             {[
               {
                 category: 'Data Engineering',
-                roles: ['Data Engineer', 'ETL Developer', 'Data Architect', 'ML Engineer', 'Platform Engineer'],
+                roles: ['Data Engineer', 'ETL / ELT Developer', 'Data Architect', 'Platform Engineer', 'Big Data Engineer'],
               },
               {
-                category: 'Data Science & Analytics',
-                roles: ['Data Scientist', 'ML Scientist', 'Research Scientist', 'Applied Scientist', 'AI Engineer'],
+                category: 'Data Science & Applied AI',
+                roles: ['Data Scientist', 'Applied Scientist', 'Machine Learning Engineer', 'AI Engineer', 'Research Scientist'],
               },
               {
-                category: 'Business Intelligence',
-                roles: ['BI Developer', 'Analytics Engineer', 'Data Analyst', 'Business Analyst', 'Visualization Specialist'],
+                category: 'Business Intelligence & Analytics',
+                roles: ['Data Analyst', 'Analytics Engineer', 'BI Developer', 'Business Analyst', 'Visualization Specialist'],
               },
               {
                 category: 'Data Leadership',
-                roles: ['Chief Data Officer', 'VP of Data', 'Head of Analytics', 'Data Science Manager', 'Engineering Manager'],
+                roles: ['Chief Data Officer', 'VP of Data', 'Head of Analytics', 'Data Science Manager', 'Data Engineering Manager'],
               },
               {
                 category: 'Specialized Roles',
-                roles: ['MLOps Engineer', 'Data Quality Engineer', 'Analytics Consultant', 'DataOps Engineer', 'BI Architect'],
+                roles: ['MLOps Engineer', 'DataOps Engineer', 'Data Quality Engineer', 'BI Architect', ' Analytics Platform Engineer'],
               },
               {
                 category: 'Emerging Tech',
-                roles: ['Prompt Engineer', 'LLM Engineer', 'AI Product Manager', 'GenAI Specialist', 'AI Ethics Lead'],
+                roles: ['Agentic AI Engineer', 'Voice AI Engineer', 'LLM Systems Engineer', 'Conversational AI Engineer', 'AI Product Manager'],
               },
             ].map((roleGroup, index) => {
               return (
@@ -476,7 +475,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto mb-6">
-              Don't see the exact role you're looking for? We work across all data, analytics, and AI positions. Get in touch to discuss your specific hiring needs.
+              Don't see the exact role you're hiring for? Our coverage goes well beyond these roles and we'll be happy to understand your specific requirements.
             </p>
             <CTAButton href="/contact" variant="primary" size="lg">
               Discuss Your Hiring Needs
@@ -497,41 +496,41 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+              <div key={testimonial.id} className="relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-neutral-100 flex flex-col">
                 {/* Quote Icon */}
-                <div className="absolute top-8 right-8 opacity-10">
-                  <svg className="w-24 h-24 text-accent-500" fill="currentColor" viewBox="0 0 24 24">
+                <div className="absolute top-6 right-6 opacity-10">
+                  <svg className="w-20 h-20 text-accent-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col flex-grow">
                   {/* Stars */}
-                  <div className="flex gap-1 mb-6 justify-center">
+                  <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <svg key={i} className="w-6 h-6 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
+                      <svg key={i} className="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
 
                   {/* Testimonial Text */}
-                  <p className="text-lg md:text-xl text-neutral-700 leading-relaxed mb-8 text-center italic">
+                  <p className="text-base text-neutral-700 leading-relaxed mb-6 flex-grow">
                     "{testimonial.content}"
                   </p>
 
                   {/* Author */}
-                  <div className="flex items-center justify-center gap-4 pt-6 border-t border-neutral-200">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent-500 to-secondary-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                  <div className="flex items-center gap-4 pt-4 border-t border-neutral-100">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-accent-500 to-secondary-600 flex items-center justify-center text-white text-xl font-bold shadow-md flex-shrink-0">
                       {testimonial.name.charAt(0)}
                     </div>
-                    <div className="text-left">
-                      <p className="text-xl font-bold text-neutral-900">{testimonial.name}</p>
+                    <div className="text-left min-w-0">
+                      <p className="text-lg font-bold text-neutral-900">{testimonial.name}</p>
                       <p className="text-sm text-neutral-600">{testimonial.position}</p>
-                      <p className="text-sm text-neutral-500">{testimonial.company}</p>
+                      <p className="text-sm text-neutral-500 truncate">{testimonial.company}</p>
                     </div>
                   </div>
                 </div>

@@ -5,19 +5,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.ap
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Terms of Service | DataVruti - Data Recruitment Services',
-    description: 'Read DataVruti\'s terms of service to understand the terms and conditions for using our data recruitment and staffing services.',
+    title: 'Terms of Service | datavruti - Data Recruitment Services',
+    description: 'Read datavruti\'s terms of service to understand the terms and conditions for using our data recruitment and staffing services.',
     alternates: {
       canonical: `${siteUrl}/terms-of-service`,
     },
     openGraph: {
       url: `${siteUrl}/terms-of-service`,
-      title: 'Terms of Service | DataVruti - Data Recruitment Services',
-      description: 'Read DataVruti\'s terms of service to understand the terms and conditions for using our data recruitment and staffing services.',
+      title: 'Terms of Service | datavruti - Data Recruitment Services',
+      description: 'Read datavruti\'s terms of service to understand the terms and conditions for using our data recruitment and staffing services.',
     },
     twitter: {
-      title: 'Terms of Service | DataVruti - Data Recruitment Services',
-      description: 'Read DataVruti\'s terms of service to understand the terms and conditions for using our data recruitment and staffing services.',
+      title: 'Terms of Service | datavruti - Data Recruitment Services',
+      description: 'Read datavruti\'s terms of service to understand the terms and conditions for using our data recruitment and staffing services.',
     },
     robots: {
       index: false,
@@ -44,14 +44,14 @@ export default function TermsOfServicePage() {
 
             <h2 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">1. Acceptance of Terms</h2>
             <p className="text-neutral-700 mb-6">
-              By accessing and using the services provided by Reflion Tech Private Limited (operating as "DataVruti"),
+              By accessing and using the services provided by Reflion Tech Private Limited (operating as "datavruti"),
               you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to
               these terms, please do not use our services.
             </p>
 
             <h2 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">2. Services</h2>
             <p className="text-neutral-700 mb-4">
-              DataVruti provides recruitment and staffing services including but not limited to:
+              datavruti provides recruitment and staffing services including but not limited to:
             </p>
             <ul className="list-disc pl-6 text-neutral-700 mb-6 space-y-2">
               <li>Consult & Deliver - HR consulting and advisory services</li>
@@ -93,13 +93,13 @@ export default function TermsOfServicePage() {
 
             <h2 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">7. Intellectual Property</h2>
             <p className="text-neutral-700 mb-6">
-              All content on the DataVruti website, including text, graphics, logos, and software, is the property
+              All content on the datavruti website, including text, graphics, logos, and software, is the property
               of Reflion Tech Private Limited and is protected by copyright and intellectual property laws.
             </p>
 
             <h2 className="text-2xl font-bold text-neutral-900 mt-8 mb-4">8. Limitation of Liability</h2>
             <p className="text-neutral-700 mb-6">
-              DataVruti shall not be liable for any indirect, incidental, special, consequential, or punitive damages
+              datavruti shall not be liable for any indirect, incidental, special, consequential, or punitive damages
               resulting from your use or inability to use our services. We make no warranties regarding the suitability
               of candidates or guarantee of successful placements.
             </p>

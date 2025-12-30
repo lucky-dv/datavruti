@@ -24,7 +24,7 @@ export default function Footer() {
               <div className="relative h-16 rounded-lg inline-block">
                 <Image
                   src="/dvlogowhite.png"
-                  alt="DataVruti Logo"
+                  alt="datavruti Logo"
                   width={280}
                   height={96}
                   className="object-contain h-full w-auto"

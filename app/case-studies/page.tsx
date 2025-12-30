@@ -9,19 +9,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.ap
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Data Hiring Case Studies | Recruitment Success Stories | DataVruti',
-    description: 'Explore DataVruti\'s data hiring success stories and case studies. Learn how we helped BFSI, SaaS companies, and startups build world-class data teams through strategic recruitment partnerships.',
+    title: 'Data Hiring Case Studies | Recruitment Success Stories | datavruti',
+    description: 'Explore datavruti\'s data hiring success stories and case studies. Learn how we helped BFSI, SaaS companies, and startups build world-class data teams through strategic recruitment partnerships.',
     alternates: {
       canonical: `${siteUrl}/case-studies`,
     },
     openGraph: {
       url: `${siteUrl}/case-studies`,
-      title: 'Data Hiring Case Studies | Recruitment Success Stories | DataVruti',
-      description: 'Explore DataVruti\'s data hiring success stories and case studies. Learn how we helped BFSI, SaaS companies, and startups build world-class data teams through strategic recruitment partnerships.',
+      title: 'Data Hiring Case Studies | Recruitment Success Stories | datavruti',
+      description: 'Explore datavruti\'s data hiring success stories and case studies. Learn how we helped BFSI, SaaS companies, and startups build world-class data teams through strategic recruitment partnerships.',
     },
     twitter: {
-      title: 'Data Hiring Case Studies | Recruitment Success Stories | DataVruti',
-      description: 'Explore DataVruti\'s data hiring success stories and case studies. Learn how we helped BFSI, SaaS companies, and startups build world-class data teams through strategic recruitment partnerships.',
+      title: 'Data Hiring Case Studies | Recruitment Success Stories | datavruti',
+      description: 'Explore datavruti\'s data hiring success stories and case studies. Learn how we helped BFSI, SaaS companies, and startups build world-class data teams through strategic recruitment partnerships.',
     },
   };
 }

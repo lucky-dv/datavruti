@@ -33,7 +33,7 @@ Vercel Analytics is already installed and providing basic analytics. To connect 
 1. **Create a GA4 Property**
    - Go to https://analytics.google.com/
    - Click **Admin** → **Create Account**
-   - Account Name: `DataVruti`
+   - Account Name: `datavruti`
    - Property Name: `datavruti.com`
    - Reporting Time Zone: `India`
    - Currency: `INR (Indian Rupee)`

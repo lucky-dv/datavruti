@@ -13,7 +13,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: '👋 Welcome to DataVruti! I\'m your AI assistant specializing in global data talent recruitment.\n\nWhether you\'re looking to hire top data professionals or exploring career opportunities, I\'m here to help. What brings you here today?',
+      content: '👋 Welcome to datavruti! I\'m your AI assistant specializing in global data talent recruitment.\n\nWhether you\'re looking to hire top data professionals or exploring career opportunities, I\'m here to help. What brings you here today?',
     },
   ]);
   const [input, setInput] = useState('');
@@ -93,7 +93,7 @@ export default function Chatbot() {
     setMessages([
       {
         role: 'assistant',
-        content: '👋 Welcome to DataVruti! I\'m your AI assistant specializing in global data talent recruitment.\n\nWhether you\'re looking to hire top data professionals or exploring career opportunities, I\'m here to help. What brings you here today?',
+        content: '👋 Welcome to datavruti! I\'m your AI assistant specializing in global data talent recruitment.\n\nWhether you\'re looking to hire top data professionals or exploring career opportunities, I\'m here to help. What brings you here today?',
       },
     ]);
     setInput('');
@@ -124,8 +124,8 @@ export default function Chatbot() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      text: 'About DataVruti',
-      message: 'Tell me about DataVruti and your services'
+      text: 'About datavruti',
+      message: 'Tell me about datavruti and your services'
     },
     {
       icon: (

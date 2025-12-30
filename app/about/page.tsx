@@ -12,19 +12,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.ap
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'About Us | DataVruti - Specialized Data Recruitment Agency',
-    description: 'Learn about DataVruti - India\'s premier data recruitment agency. Discover our mission to connect companies with exceptional data engineers, scientists, and analytics talent.',
+    title: 'About Us | datavruti - Specialized Data Recruitment Agency',
+    description: 'Learn about datavruti - India\'s premier data recruitment agency. Discover our mission to connect companies with exceptional data engineers, scientists, and analytics talent.',
     alternates: {
       canonical: `${siteUrl}/about`,
     },
     openGraph: {
       url: `${siteUrl}/about`,
-      title: 'About Us | DataVruti - Specialized Data Recruitment Agency',
-      description: 'Learn about DataVruti - India\'s premier data recruitment agency. Discover our mission to connect companies with exceptional data engineers, scientists, and analytics talent.',
+      title: 'About Us | datavruti - Specialized Data Recruitment Agency',
+      description: 'Learn about datavruti - India\'s premier data recruitment agency. Discover our mission to connect companies with exceptional data engineers, scientists, and analytics talent.',
     },
     twitter: {
-      title: 'About Us | DataVruti - Specialized Data Recruitment Agency',
-      description: 'Learn about DataVruti - India\'s premier data recruitment agency. Discover our mission to connect companies with exceptional data engineers, scientists, and analytics talent.',
+      title: 'About Us | datavruti - Specialized Data Recruitment Agency',
+      description: 'Learn about datavruti - India\'s premier data recruitment agency. Discover our mission to connect companies with exceptional data engineers, scientists, and analytics talent.',
     },
   };
 }
@@ -50,7 +50,7 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold text-primary mb-4">Our Mission</h2>
+              <h2 className="text-3xl font-bold text-primary mb-4">Our Vision</h2>
               <p className="text-lg text-neutral-600 leading-relaxed">{aboutData.mission}</p>
             </div>
 
@@ -61,7 +61,7 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold text-accent mb-4">Our Vision</h2>
+              <h2 className="text-3xl font-bold text-accent mb-4">Our Mision</h2>
               <p className="text-lg text-neutral-600 leading-relaxed">{aboutData.vision}</p>
             </div>
           </div>
@@ -95,20 +95,37 @@ export default function AboutPage() {
       </section>
 
       {/* Client Types - Trusted By */}
-      {aboutData.clientTypes && (
+      {aboutData.clientList && (
         <section className="section-padding bg-neutral-50">
           <div className="container-custom">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <SectionHeader
                 badge="Trusted Globally"
                 title="Who We Work With"
                 align="center"
                 className="mb-12"
               />
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-neutral-100 p-8 md:p-12">
-                <p className="text-lg text-neutral-700 leading-relaxed text-center">
-                  {aboutData.clientTypes}
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-neutral-100 p-8 md:p-12">
+                <p className="text-base text-neutral-600 mb-8 text-center">
+                  Trusted by 50+ clients worldwide, including:
                 </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {aboutData.clientList.map((client, idx) => {
+                    const colors = [
+                      'text-primary-600',
+                      'text-secondary-600',
+                      'text-accent-600',
+                    ];
+                    return (
+                      <div key={idx} className="flex items-start gap-3">
+                        <svg className={`w-5 h-5 ${colors[idx % 3]} flex-shrink-0 mt-0.5`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span className="text-neutral-700">{client}</span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
@@ -270,7 +287,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Partner Logos */}
+      {/* Partner Logos
       {partnerLogos.length > 0 && (
         <section className="py-16 md:py-20 bg-white relative">
           <div className="container-custom">
@@ -289,7 +306,7 @@ export default function AboutPage() {
             <PartnerLogoCarousel logos={partnerLogos} />
           </div>
         </section>
-      )}
+      )} */}
 
       {/* CTA Banner */}
       <CTASection

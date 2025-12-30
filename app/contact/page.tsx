@@ -6,19 +6,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.ap
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Contact Us | DataVruti - Data Hiring Experts',
-    description: 'Get in touch with DataVruti to discuss your data hiring needs. Contact our recruitment experts in Ahmedabad and Mumbai to build exceptional data teams.',
+    title: 'Contact Us | datavruti - Data Hiring Experts',
+    description: 'Get in touch with datavruti to discuss your data hiring needs. Contact our recruitment experts in Ahmedabad and Mumbai to build exceptional data teams.',
     alternates: {
       canonical: `${siteUrl}/contact`,
     },
     openGraph: {
       url: `${siteUrl}/contact`,
-      title: 'Contact Us | DataVruti - Data Hiring Experts',
-      description: 'Get in touch with DataVruti to discuss your data hiring needs. Contact our recruitment experts in Ahmedabad and Mumbai to build exceptional data teams.',
+      title: 'Contact Us | datavruti - Data Hiring Experts',
+      description: 'Get in touch with datavruti to discuss your data hiring needs. Contact our recruitment experts in Ahmedabad and Mumbai to build exceptional data teams.',
     },
     twitter: {
-      title: 'Contact Us | DataVruti - Data Hiring Experts',
-      description: 'Get in touch with DataVruti to discuss your data hiring needs. Contact our recruitment experts in Ahmedabad and Mumbai to build exceptional data teams.',
+      title: 'Contact Us | datavruti - Data Hiring Experts',
+      description: 'Get in touch with datavruti to discuss your data hiring needs. Contact our recruitment experts in Ahmedabad and Mumbai to build exceptional data teams.',
     },
   };
 }

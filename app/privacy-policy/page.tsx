@@ -5,19 +5,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.ap
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Privacy Policy | DataVruti - Data Recruitment Agency',
-    description: 'Read DataVruti\'s privacy policy to understand how we collect, use, and protect your personal information during recruitment services.',
+    title: 'Privacy Policy | datavruti - Data Recruitment Agency',
+    description: 'Read datavruti\'s privacy policy to understand how we collect, use, and protect your personal information during recruitment services.',
     alternates: {
       canonical: `${siteUrl}/privacy-policy`,
     },
     openGraph: {
       url: `${siteUrl}/privacy-policy`,
-      title: 'Privacy Policy | DataVruti - Data Recruitment Agency',
-      description: 'Read DataVruti\'s privacy policy to understand how we collect, use, and protect your personal information during recruitment services.',
+      title: 'Privacy Policy | datavruti - Data Recruitment Agency',
+      description: 'Read datavruti\'s privacy policy to understand how we collect, use, and protect your personal information during recruitment services.',
     },
     twitter: {
-      title: 'Privacy Policy | DataVruti - Data Recruitment Agency',
-      description: 'Read DataVruti\'s privacy policy to understand how we collect, use, and protect your personal information during recruitment services.',
+      title: 'Privacy Policy | datavruti - Data Recruitment Agency',
+      description: 'Read datavruti\'s privacy policy to understand how we collect, use, and protect your personal information during recruitment services.',
     },
     robots: {
       index: false,
@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
             </p>
 
             <p className="text-neutral-700 mb-6">
-              At Reflion Tech Private Limited (operating as "DataVruti"), we are committed to protecting your
+              At Reflion Tech Private Limited (operating as "datavruti"), we are committed to protecting your
               privacy and ensuring the security of your personal information. This Privacy Policy explains how
               we collect, use, disclose, and safeguard your information when you use our services.
             </p>
@@ -180,7 +180,7 @@ export default function PrivacyPolicyPage() {
 
             <div className="bg-accent-50 border-l-4 border-accent-500 p-6 rounded-r-xl mt-8">
               <p className="text-neutral-700">
-                <strong>Note:</strong> By using DataVruti's services, you acknowledge that you have read and
+                <strong>Note:</strong> By using datavruti's services, you acknowledge that you have read and
                 understood this Privacy Policy and agree to its terms.
               </p>
             </div>

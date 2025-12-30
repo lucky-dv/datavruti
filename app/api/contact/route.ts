@@ -27,13 +27,13 @@ function createEmailHTML(data: any) {
         <div class="container">
           <div class="header">
             <h2>${isTalentPool ? 'New Talent Pool Application' : isCandidate ? 'New Candidate Application' : 'New Contact Form Submission'}</h2>
-            <p>DataVruti Website</p>
+            <p>datavruti Website</p>
           </div>
           <div class="content">
             <pre style="white-space: pre-wrap; word-wrap: break-word;">${JSON.stringify(data, null, 2)}</pre>
           </div>
           <div class="footer">
-            <p>This email was sent from the DataVruti website</p>
+            <p>This email was sent from the datavruti website</p>
             <p>© ${new Date().getFullYear()} Reflion Tech Private Limited. All rights reserved.</p>
           </div>
         </div>

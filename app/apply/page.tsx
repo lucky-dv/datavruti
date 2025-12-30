@@ -7,19 +7,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.ap
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Apply Now | Join DataVruti Talent Pool',
-    description: 'Apply to join DataVruti\'s talent pool and get matched with top data jobs. Quick 3-step application process for Data Engineers, Scientists, Analysts, and more.',
+    title: 'Apply Now | Join datavruti Talent Pool',
+    description: 'Apply to join datavruti\'s talent pool and get matched with top data jobs. Quick 3-step application process for Data Engineers, Scientists, Analysts, and more.',
     alternates: {
       canonical: `${siteUrl}/apply`,
     },
     openGraph: {
       url: `${siteUrl}/apply`,
-      title: 'Apply Now | Join DataVruti Talent Pool',
-      description: 'Apply to join DataVruti\'s talent pool and get matched with top data jobs. Quick 3-step application process for Data Engineers, Scientists, Analysts, and more.',
+      title: 'Apply Now | Join datavruti Talent Pool',
+      description: 'Apply to join datavruti\'s talent pool and get matched with top data jobs. Quick 3-step application process for Data Engineers, Scientists, Analysts, and more.',
     },
     twitter: {
-      title: 'Apply Now | Join DataVruti Talent Pool',
-      description: 'Apply to join DataVruti\'s talent pool and get matched with top data jobs. Quick 3-step application process for Data Engineers, Scientists, Analysts, and more.',
+      title: 'Apply Now | Join datavruti Talent Pool',
+      description: 'Apply to join datavruti\'s talent pool and get matched with top data jobs. Quick 3-step application process for Data Engineers, Scientists, Analysts, and more.',
     },
   };
 }

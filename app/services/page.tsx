@@ -10,18 +10,18 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.ap
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Data Recruitment Services | Contract & Permanent Staffing Solutions',
-    description: 'DataVruti offers comprehensive data recruitment services including contract staffing, permanent hiring, and RPO for data engineering, data science, and analytics roles. Specialized IT staffing for BFSI, SaaS, and startups.',
+    description: 'datavruti offers comprehensive data recruitment services including contract staffing, permanent hiring, and RPO for data engineering, data science, and analytics roles. Specialized IT staffing for BFSI, SaaS, and startups.',
     alternates: {
       canonical: `${siteUrl}/services`,
     },
     openGraph: {
       url: `${siteUrl}/services`,
       title: 'Data Recruitment Services | Contract & Permanent Staffing Solutions',
-      description: 'DataVruti offers comprehensive data recruitment services including contract staffing, permanent hiring, and RPO for data engineering, data science, and analytics roles. Specialized IT staffing for BFSI, SaaS, and startups.',
+      description: 'datavruti offers comprehensive data recruitment services including contract staffing, permanent hiring, and RPO for data engineering, data science, and analytics roles. Specialized IT staffing for BFSI, SaaS, and startups.',
     },
     twitter: {
       title: 'Data Recruitment Services | Contract & Permanent Staffing Solutions',
-      description: 'DataVruti offers comprehensive data recruitment services including contract staffing, permanent hiring, and RPO for data engineering, data science, and analytics roles. Specialized IT staffing for BFSI, SaaS, and startups.',
+      description: 'datavruti offers comprehensive data recruitment services including contract staffing, permanent hiring, and RPO for data engineering, data science, and analytics roles. Specialized IT staffing for BFSI, SaaS, and startups.',
     },
   };
 }
