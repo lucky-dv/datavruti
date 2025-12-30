@@ -168,10 +168,10 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="bg-neutral-50 p-6 rounded-xl mb-8">
               <p className="text-neutral-700 mb-2">
-                <strong>Email:</strong> sales@datavruti.com
+                <strong>Email:</strong> vikram@datavruti.com
               </p>
               <p className="text-neutral-700 mb-2">
-                <strong>Phone:</strong> +91 9378092086
+                <strong>Phone:</strong> +91 98679 98866
               </p>
               <p className="text-neutral-700">
                 <strong>Address:</strong> B-1302 Karmyog Heights, S. V. Desai Marg, Navrangpura, Ahmedabad 380009, Gujarat, India

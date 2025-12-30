@@ -254,7 +254,7 @@ export default function Chatbot() {
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed z-50 group transition-all duration-500 ${
           isOpen ? 'md:scale-0 md:rotate-180' : 'scale-100 rotate-0'
-        } right-0 bottom-[6.25rem] md:right-8 md:bottom-8`}
+        } right-0 bottom-[7.5rem] md:right-8 md:bottom-8`}
         aria-label="Open chat"
       >
         {/* Mobile: Slim vertical tab */}
@@ -305,7 +305,7 @@ export default function Chatbot() {
 
       {/* Chatbot Window - Ultra Modern Design */}
       {isOpen && (
-        <div className="fixed bottom-[6.5625rem] md:bottom-8 right-4 md:right-8 z-50 w-[calc(100vw-2rem)] md:w-[28rem] h-[36rem] flex flex-col animate-scale-in origin-bottom-right">
+        <div className="fixed top-24 bottom-4 md:bottom-8 md:top-auto right-4 md:right-8 z-[60] w-[calc(100vw-2rem)] md:w-[28rem] md:h-[36rem] flex flex-col animate-scale-in origin-bottom-right">
           {/* Container */}
           <div className="relative flex flex-col h-full bg-white rounded-3xl shadow-2xl border-2 border-neutral-200 overflow-hidden">
 

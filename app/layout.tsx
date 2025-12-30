@@ -100,7 +100,7 @@ export default function RootLayout({
     <html lang="en" className={raleway.variable}>
       <body className="font-sans">
         <Navbar />
-        <main className="pb-28 md:pb-0">{children}</main>
+        <main>{children}</main>
         <Footer />
         <ScrollToTop />
         <Chatbot />

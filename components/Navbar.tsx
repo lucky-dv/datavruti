@@ -112,10 +112,10 @@ export default function Navbar() {
     {
       name: 'Contact',
       href: '/contact',
-      cta: true,
+      cta: false,
       icon: (isActive: boolean) => (
         <svg
-          className={`h-6 w-6 ${isActive ? 'text-white' : 'text-white'}`}
+          className={`h-6 w-6 ${isActive ? 'text-accent' : 'text-neutral-400'}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -244,7 +244,7 @@ export default function Navbar() {
       >
         <div className="flex justify-center px-4">
           <div className="glass-nav pointer-events-auto flex items-center gap-3 px-3 py-2">
-            <div className="relative z-10 grid flex-1 grid-cols-5 gap-0.5">
+            <div className="relative z-10 grid flex-1 grid-cols-6 gap-0.5">
               {primaryNav.map((item) => {
                 const isActive =
                   pathname === item.href ||

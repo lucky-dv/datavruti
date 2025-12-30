@@ -24,7 +24,7 @@ export default function CTASection({
   className = '',
 }: CTASectionProps) {
   return (
-    <section className={`relative overflow-hidden bg-slate-900 text-white pt-24 pb-40 md:py-32 md:mb-0 -mb-28 ${className}`}>
+    <section className={`relative overflow-hidden bg-slate-900 text-white py-16 md:py-32 ${className}`}>
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-850 to-slate-900"></div>
 
