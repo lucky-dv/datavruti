@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     description: defaultSEO.description as string,
     images: [
       {
-        url: '/datavruti-full.jpg',
+        url: 'https://www.datavruti.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'datavruti - Global Data Talent Recruitment',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: defaultSEO.title as string,
     description: defaultSEO.description as string,
-    images: ['/datavruti-full.jpg'],
+    images: ['https://www.datavruti.com/og-image.png'],
   },
   robots: {
     index: true,

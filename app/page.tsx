@@ -10,7 +10,7 @@ import aboutData from '@/content/about.json';
 import { organizationSchema, localBusinessSchema, websiteSchema, breadcrumbSchema } from '@/utils/seo-config';
 import { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+const siteUrl = 'https://www.datavruti.com';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
