@@ -3,13 +3,15 @@ import services from '@/content/services.json';
 import caseStudies from '@/content/case-studies.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Hardcode canonical domain - never use env vars
   const baseUrl = 'https://www.datavruti.com';
 
   const now = new Date();
 
+  // Only include indexable pages - exclude noindex pages (privacy-policy)
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}`,
+      url: baseUrl,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 1.0,
@@ -50,18 +52,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.6,
     },
-    {
-      url: `${baseUrl}/terms-of-service`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
+    // Excluded: privacy-policy (noindex)
+    // Excluded: terms-of-service (low value, optional)
   ];
 
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({

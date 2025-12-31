@@ -12,6 +12,8 @@ interface CaseStudyPageProps {
   };
 }
 
+const siteUrl = 'https://www.datavruti.com';
+
 export async function generateStaticParams() {
   return caseStudies.map((study) => ({
     slug: study.slug,
@@ -27,9 +29,23 @@ export async function generateMetadata({ params }: CaseStudyPageProps) {
     };
   }
 
+  const canonicalUrl = `${siteUrl}/case-studies/${caseStudy.slug}`;
+
   return {
     title: `${caseStudy.title} | datavruti Case Studies`,
     description: caseStudy.challenge,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      url: canonicalUrl,
+      title: `${caseStudy.title} | datavruti Case Studies`,
+      description: caseStudy.challenge,
+    },
+    twitter: {
+      title: `${caseStudy.title} | datavruti Case Studies`,
+      description: caseStudy.challenge,
+    },
   };
 }
 

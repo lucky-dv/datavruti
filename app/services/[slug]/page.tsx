@@ -9,6 +9,8 @@ export async function generateStaticParams() {
   }));
 }
 
+const siteUrl = 'https://www.datavruti.com';
+
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const service = services.find((s) => s.slug === params.slug);
 
@@ -18,9 +20,23 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
   }
 
+  const canonicalUrl = `${siteUrl}/services/${service.slug}`;
+
   return {
     title: `${service.title} | datavruti`,
     description: service.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      url: canonicalUrl,
+      title: `${service.title} | datavruti`,
+      description: service.description,
+    },
+    twitter: {
+      title: `${service.title} | datavruti`,
+      description: service.description,
+    },
   };
 }
 
