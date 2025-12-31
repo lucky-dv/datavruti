@@ -5,7 +5,7 @@ import CTASection from '@/components/ui/CTASection';
 import services from '@/content/services.json';
 import { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.datavruti.com';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

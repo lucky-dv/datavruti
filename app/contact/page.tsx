@@ -2,7 +2,7 @@ import Hero from '@/components/Hero';
 import ContactForm from '@/components/ContactForm';
 import { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://datavruti.vercel.app';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.datavruti.com';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
